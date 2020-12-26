@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>switch문</title>
+		<script>
+		
+		//switch문의 기본 틀
+		
+/* 		
+			switch (key) {
+			case value:
+				
+				break;
+
+			default:
+				break;
+			}
+			
+			 */
+			 
+			 
+/* 			 
+			 
+			 var number = 0;					
+			 number = prompt("숫자를 입력하세요");	//초기화를 숫자형으로 해도 prompt에서 문자형으로 입력받으면 문자형이 된다.
+			 
+			 
+			 switch(number){
+				 case "1" : alert("1이 입력되었습니다");
+				 	break;
+				 
+				 case "2" : alert("2가 입력되었습니다.");
+				 	break;
+				 	
+				 default : alert("1과 2 둘 중 아무것도 아닙니다.");
+				 
+			 }
+			 
+			  */
+			 
+			  
+			 
+			 /*
+			 응용문제1
+			 	
+			 	prompt로 성적을 입력받아서 A~F(E를 제외하고)까지 문자로 출력
+			 	
+			 	100~90	:	A
+			 	80~89	:	B
+			 	70~79	:	C
+			 	60~69	:	D
+			 	나머지 	:	F
+			 
+			 */
+			 
+			var score = 0;
+			score = prompt("성적을 입력하세요");
+			 
+			 
+/* 			문제1	 
+			switch (parseInt(score/10)) {
+			case 10:
+				document.write("A");
+				break;
+			case 9:
+				document.write("A");
+				break;
+			case 8:
+				document.write("B");
+				break;
+			case 7:
+				document.write("C");
+				break;
+			case 6:
+				document.write("D");
+				break;
+
+			default: document.write("F");
+				break;
+			}
+			 
+			 */
+			 
+			 /*
+			 응용뮨제2
+			 
+			 	해당하는 학점의 구문을 div태그를 만들어서 스크립트 코드로 넣어주세요
+			 	
+			 	A : 참 잘했습니다
+			 	B : 좋은 점수 입니다
+			 	C : 괜찮은 점수 입니다.
+			 	D : 좀 더 노력하세요
+			 	F : 다음학기 재수강하세요!
+			 
+			 */
+			 	
+			 
+			 //문제2
+			 window.onload=function(){
+				 
+				switch (parseInt(score/10)) {
+				case 10:
+					document.getElementById("box").innerHTML="참 잘했습니다.";
+					break;
+				case 9:
+					document.getElementById("box").innerHTML="참 잘했습니다.";
+					break;
+				case 8:
+					document.getElementById("box").innerHTML="좋은 점수 입니다.";
+					break;
+				case 7:
+					document.getElementById("box").innerHTML="괜찮은 점수 입니다.";
+					break;
+				case 6:
+					document.getElementById("box").innerHTML="좀 더 노력하세요.";
+					break;
+	
+				default: document.getElementById("box").innerHTML="다음학기 재수강하세요!";
+					break;
+				}
+			 }
+			 
+			
+			 
+			 
+		</script>
+	</head>
+	<body>
+		<div id="box"></div>
+	</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>ajax_basic</title>
+		<script src="../js/jquery-3.5.1.min.js"></script>
+		<script>
+		/*
+			XMLHttpRequest객체
+				: 	Ajax의 가장 핵심적인 구성요소
+					Ajax에서 해당 객체는 웹 브라우저가 서버와 데이터를 교환 할 때 사용된다.
+					웹 브라우저가 백그라운드에서 계속해서 서버와 통신할 수 있는 것은
+					해당 객체를 사용하기 때문이다.
+		*/
+		
+			//javaScript이용
+			var httpRequest;
+			function createRequest(){
+				if(window.XMLHttpRequest){
+					return new XMLHttpRequest;
+				}else{
+					return "no httpRequest";
+				}
+			}
+			
+			
+			
+			function sendRequest(){
+				var httpRequest = new XMLHttpRequest();
+				
+				httpRequest.onreadystatechange = function(){
+					if(httpRequest.readyState == XMLHttpRequest.DONE
+							&&httpRequest.state == 200){
+						document.getElementById("text").innerHTML
+						 = httpRequest.responseText;
+					}
+				};
+				
+				httpRequest.open("GET", "first.jsp");
+				httpRequest.send();
+				
+				
+			}
+			
+			
+			
+			
+			//jQuery의 ajax를 이용
+			
+			$(function(){
+				$.ajax({
+					//url:"first1.jsp",	//(일부러 오류 발생 시킴--> fail메서드 실행)
+					url:"first.jsp",	//클라이언트가 요청을 보낼 서버의 URL주소
+					data:{name:"손대성"},	//HTTP요청과 함께 서버로 보낼 데이터
+					type:"POST",			//HTTP요청 방식(GET, POST)
+					//type:"GET",			//HTTP요청 방식(GET, POST)
+					dataType:"text"		//서버에서 보내줄 데이터의 타입
+					
+				})
+				//메서드 체이닝 방식(.으로 메서드를 연결하는 방식)------> 메서드 체이닝이 다 끝난 후에 ;를 달아야 한다.
+				//HTTP요청이 성공하면 요청된 데이터가 done() 메서드의 파라미터로 전달됨
+				.done(function(txt){
+					alert(txt);
+				})
+				//HTTP요청이 실패하면 오류와 상태에 대한 정보가 fail()메서드의 파라미터로 전달됨
+				.fail(function(xhr,status,errorThrown){
+					alert(xhr+"/"+status+"/"+errorThrown);
+				})
+				//HTTP요청이 성공하거나 실패할 경우, 결과에 상관없이 무조건 실행된다.
+				.always(function(){
+					alert("성공이나 실패시 무조건 실행된다.");
+				});
+			});
+			
+			
+			
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

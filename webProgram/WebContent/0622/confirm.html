@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>confirm 함수</title>
+	</head>
+	<script>
+
+		/* 	
+		 function conf(){
+		 var check = confirm("남자이면 확인 버튼을, 여자이면 취소 버튼을 눌러주세요");
+		 console.log(check);
+		
+		 */
+
+		/*	
+			남자(확인버튼)이면 버튼의 색상을 파랑색으로
+			여자(취소버튼)이면 버튼의 색상을 오렌지색으로 변경하세요.
+		 */
+
+		function conf(obj) {
+			var check = confirm("남자이면 확인 버튼을, 여자이면 취소 버튼을 눌러주세요");
+			console.log(check);
+
+			/*	
+				남자(확인버튼)이면 버튼의 색상을 파랑색으로
+				여자(취소버튼)이면 버튼의 색상을 오렌지색으로 변경하세요.
+			 */
+			if (check) {
+				obj.style.backgroundColor = "blue";
+			} else {
+				obj.style.backgroundColor = "orange";
+			}
+		}
+		 
+	</script>
+	<body>
+		<input type="button" value="눌러보세요" onclick="conf(this);">
+	</body>
+</html>

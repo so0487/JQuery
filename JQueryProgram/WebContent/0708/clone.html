@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>clone(복제)</title>
+		<script src="../js/jquery-3.5.1.js"></script>
+		<script>
+			$(function(){
+				$("p").click(function(){
+					$(this).css("font-size","+=2px");
+				});
+				
+				
+				/*
+					clone() 은 복제하는 메서드
+					clone(true)는 해당 태그의 이벤트까지 가져온다.
+				*/
+				
+				
+				
+				$("#btn1").click(function(){
+					$("body").append($("p").clone());
+				});
+				
+				$("#btn2").click(function(){
+					$("body").append($("p").clone(true));
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<p>p태그 입니다. 1</p>
+		<p>p태그 입니다. 2</p>
+		<button id="btn1">clone버튼</button>
+		<button id="btn2">clone버튼(true)</button>
+	</body>
+</html>

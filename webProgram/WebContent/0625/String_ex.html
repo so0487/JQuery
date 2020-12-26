@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>String객체 문제</title>
+		<script>
+			function ex1(){
+			//str 변수에 문자열을 하상욱&제갈수진	이라고 넣고 
+			//출력은 제갈수진&하상욱 으로 해주세요.	
+			var str = "하상욱&제갈수진";
+			var arr = str.split("&");
+			
+			console.log(arr[0]);
+			console.log(arr[1]);
+			
+			document.write(arr[1].concat(str.substring(3, 4),arr[0]));
+			
+			}
+			function ex2(){
+			/*body태그에 id, pw input으로 설정하고, 
+			  submit버튼을 만들어서 
+			  form의 action페이지로 이동하게 태그를 생성하세요.
+			  action="result.html"			  
+			  result.html 에서 내부 스크립트로 
+			  location.href를 확인한 후 
+			  (result.html?id=dddd&pw=1111)
+			  id의 값과 , pw의 값만 출력해주세요. 			  
+			     출력예시 ) ID : dddd , pw : 1111
+			*/
+				
+			}
+		
+			ex1();
+		</script>
+		
+	</head>
+	<body>
+		<form action="result.html">
+			ID:<input type="text" name="id"><br>
+			PW:<input type="password" name="pw"><br>
+			<input type="submit" value="로그인">
+		</form>
+	</body>
+</html>

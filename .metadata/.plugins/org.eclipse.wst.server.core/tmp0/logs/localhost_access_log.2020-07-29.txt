@@ -1,0 +1,12 @@
+127.0.0.1 - - [29/Jul/2020:00:46:25 +0900] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [29/Jul/2020:00:46:28 +0900] "GET /ajaxPro/prod/prod.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [29/Jul/2020:00:46:28 +0900] "GET /ajaxPro/js/jquery-3.5.1.min.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [29/Jul/2020:00:46:29 +0900] "POST /ajaxPro/GetLprodServlet HTTP/1.1" 404 997
+0:0:0:0:0:0:0:1 - - [29/Jul/2020:00:47:14 +0900] "GET /ajaxPro/prod/prod.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [29/Jul/2020:00:47:14 +0900] "GET /ajaxPro/js/jquery-3.5.1.min.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [29/Jul/2020:00:47:15 +0900] "POST /ajaxPro/GetLprodServlet HTTP/1.1" 404 997
+0:0:0:0:0:0:0:1 - - [29/Jul/2020:00:47:15 +0900] "GET /favicon.ico HTTP/1.1" 404 973
+0:0:0:0:0:0:0:1 - - [29/Jul/2020:00:48:17 +0900] "GET /ajaxPro/member/memberList.html HTTP/1.1" 200 1165
+0:0:0:0:0:0:0:1 - - [29/Jul/2020:00:48:17 +0900] "GET /ajaxPro/js/jquery-3.5.1.min.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [29/Jul/2020:00:48:26 +0900] "GET /ajaxPro/MemberServlet HTTP/1.1" 200 3635
+0:0:0:0:0:0:0:1 - - [29/Jul/2020:00:48:26 +0900] "GET /ajaxPro/MemberServlet HTTP/1.1" 200 3635

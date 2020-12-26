@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>location</title>
+		<script>
+			console.log(location);
+			
+			alert(location.href);	//URL주소값 반환
+			/*
+			location.href		//URL주소값 반환
+			location.host		//URL중에서 hostname과 port를 반환
+			location.hostname	//URL중에서 port를 제외한 값을 반환(www.naver.com에 해당)
+			location.port		//URL중에서 port값을 반환(숫자값 : 8080에 해당)
+			location.search		//URL중에서 쿼리 부분을 반환(? 뒤에 파라미터 부분)
+			*/
+			
+			function re(){
+				//location.reload();
+				location.replace("http://www.naver.com");	//뒤로가기 비활성화
+				
+			}
+			
+			
+			
+		</script>
+	</head>
+	<body>
+		<input type="button" value="reload" onclick="re();return false">
+	</body>
+</html>

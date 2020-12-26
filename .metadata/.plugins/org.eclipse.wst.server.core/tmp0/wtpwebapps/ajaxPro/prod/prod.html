@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>ProdTest</title>
+		<script src="../js/jquery-3.5.1.min.js"></script>
+		<script>
+			$(function(){
+				$.ajax({
+					url:"/ajaxPro/GetLprodServlet",
+					type:"post",
+					dataType:"json",
+					sucess:function(result){
+						$("#lprodSelect").html(result.lprod_id);
+					},
+					error:function(xhr){
+						
+						alert("error"+xhr.status);
+					}
+					
+				});
+					$("#lprodList").change(function() {
+						
+					});
+			});
+		</script>
+		<style>
+			div{
+				border: 1px solid blue; 
+			}
+		</style>
+	</head>
+	<body>
+		<div id="name">
+			<h2>제품 리스트</h2>
+		</div><!-- name -->
+		
+		<div id="list">
+			<div id="lprodList">
+				<p>제품 분류 리스트</p>
+				<select id="lprodSelect"></select>
+			</div><!-- lprodList -->
+			
+			<div id="prodList">
+				<p>상품 리스트</p>
+				<select id="prodSelect"></select>
+			</div><!-- prodList -->
+		</div><!-- list -->
+		
+			<p>상세보기</p>
+		<div id="ProdDetail">
+		
+		</div><!-- prodDetail -->
+	</body>
+</html>

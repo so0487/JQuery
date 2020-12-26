@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Event_x좌표, y좌표</title>
+		<script src="../js/jquery-3.5.1.min.js"></script> 
+		<script type="text/javascript"></script>
+		<script>
+			$(function(){
+				//$(document).mouseover(function(event){
+				$(document).mousemove(function(event){
+					var info = "page좌표 : "+event.pageX + " , " + event.pageY+"\n"
+					+"screen좌표 : "+event.screenX+" , "+event.screenY;
+					
+					
+					/*
+						.html() : 안에 내용에 html 태그를 적용할 수 있다.(줄바꿈 태그는 <br>)
+						.text() : 안에 내용에 html 태그를 적용할 수 없다.(줄바꿈은 \n)
+					*/
+					
+					$("#log").text(info);
+						
+						
+						
+						
+					//이미지 태그를 생성해서 좌표가 100,100이하가 되었을 경우 img태그를 띄우기
+					if(event.pageX <=100 && event.pageY <= 100){
+						var imgtag = $("<img/>",{
+								"src":"../img/puppy.jpg",
+								"width" : "100px",
+								"height" : "100px"
+							});
+						$(imgtag).appendTo("body");
+						}
+					
+				});
+				
+			});
+		</script>
+		<style>
+			body{
+				background-color: #eef;
+			}
+			div#log{
+				width: 300px;
+				height: 50px;
+				padding: 20px;
+				border: 1px solid black;
+				text-align: center;
+				margin: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="log"></div>
+	</body>
+</html>

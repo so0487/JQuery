@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JQueryBasic2</title>
+		<script src="../js/jquery-3.5.1.min.js"></script>
+		<script>
+			$(function(){
+				$("p").css("color","red");
+				
+				//div안에 있는 p태그만 color yellow로 변경
+				//$("div p").css("color","yellow");
+				$("form div p").css("color","yellow");
+				
+				$("p").click(function(){
+					alert(1);
+					
+					//클릭한 p태그 안에 내용을  alert로 출력해 보세요
+					
+					alert($(this).html());
+				});
+				
+			});
+		</script>
+	</head>
+	<body>
+		<p>무궁화 꽃이 피었습니다.1</p>
+		<div>
+			<p>무궁화 꽃이 피었습니다.2</p>
+		</div>
+		<form>
+			<div>
+				<p>무궁화 꽃이 피었습니다.3</p>
+			</div>
+		</form>
+		
+		<h1>제목입니다.</h1>
+		<h2 id="param">작은 제목 입니다.</h2>
+		<h2 id="sample">샘플입니다.</h2>
+		
+		
+	</body>
+</html>

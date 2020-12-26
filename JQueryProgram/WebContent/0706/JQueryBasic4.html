@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JQueryBasic4</title>
+		<script src="../js/jquery-3.5.1.min.js"></script>
+		<script>
+		//$(document).ready();과 동일(유사)
+			$(function() {
+				//alert($("p").length); //해당 태그의 개수 속성
+				
+				//for문을 이용해서 p태그 안에 내용을 각각 출력하세요(alert, console.log)
+				
+				//for(var i=0;i<$("p").length;i++){
+				//	$("p").eq(i).html;
+					//console.log($("p").eq(i).html());
+				//}
+				
+				$("p").each(function(){
+					console.log($(this).html());
+				});
+				
+				
+			});
+		</script>
+	</head>
+	<body>
+		<P>p태그 입니다.1</P>
+		<P>p태그 입니다.2</P>
+		<P>p태그 입니다.3</P>
+		<P>p태그 입니다.4</P>
+		
+		<hr>
+		<div>div태그 입니다.</div>
+		<p>p태그 입니다.</p>
+		<span>span태그 입니다.</span>
+	</body>
+</html>

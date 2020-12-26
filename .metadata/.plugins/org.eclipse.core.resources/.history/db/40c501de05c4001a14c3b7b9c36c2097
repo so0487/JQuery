@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery_ex</title>
+		<style>
+			.bingoColor {
+				background-color: lime;
+			}
+			
+			table,tr,td {
+				border: 1px solid black;
+			}
+			
+			td {
+				cursor: pointer;
+			}
+</style>
+		<!-- 
+			1) 	10*10테이블 태그를 작성하고
+				해당하는 테이블의 x,y좌표를 알맞게 넣어보세요(jQuery이용)
+				죄표 : 0,0
+				
+			2) 칸을 클릭하여 선택하면 배경색을 변경해준다 	
+			
+				-> 위의 내용이 완성되면 5*5로 변경 
+				
+			3) 	1줄이 완성되면 테이블 하단에 빙고가 몇줄인지 작성해준다 .
+				(빙고 수 : 2줄 입니다.) 
+				
+		
+		 -->
+		<script src="../js/jquery-3.5.1.min.js"></script> 
+		<script>
+			$(function(){
+				
+				//10*10칸 만들기
+				/*
+				for(var i=0; i<10; i++){
+					$("table").append(
+						$("<tr/>").append(function(){
+							for(var j=0; j<10 ;j++){
+								$(this).append($("<td/>").html(i+","+j))
+							}
+						})
+					);
+				}
+				*/
+		
+				
+				
+				
+				
+				//5*5칸 만들기
+				for(var i=0; i<5; i++){
+					$("#bingo").append(					
+						$("<tr/>").append(function(){
+							for(var j=0; j<5; j++){
+								//td안에 id 넣기
+								/*
+								$("<td/>",{
+									"id":"td"+i+j,
+									"text":i+","+j
+								}).appendTo($(this));
+								*/
+								//$(this).attr("id","td"+i+j);
+								
+								
+								//td안에 좌표값 찍기
+								$(this).append($("<td/>").html(i+","+j).attr("id","td"+i+j));
+								
+								
+							}
+						})
+					);
+				}
+				
+				
+				//해당 하는 좌표를 클릭하였을 경우 색 표시
+				/*
+				$("table").delegate("td", "click", function(){
+					$(this).toggleClass("bingoColor"); 
+				*/	
+				
+				$("td").click(function(){		
+					
+				//빙고가 되는 경우의 수 찾기
+				
+				var x;
+				var y;
+				var bingo=0;
+				var temp_x, temp_y;
+				var td_count=0; tr_count=0;
+				
+				
+				//가로빙고
+				$("td").each(function(){
+					x = $(this).html().split(",")[0];
+					
+					if(x!=tmep_x){
+						temp_x = $(this).html().split(",")[0];
+						td_count=0;
+					}
+					
+					if(x==temp_x&&$(this).hasClass("bingoColor")){
+						td_count++;
+						
+					}
+					
+					if(td_count==5)
+						bingo++;
+				});
+				
+				
+				//세로빙고
+				for(var i=0;i<=5;i++){
+					$("td:nth-child("+i+")").each(function(){
+						y=$(this).html().split(",")[1];
+						
+						if(y!=temp_y){
+							temp_y = (this).html().split(",")[1];
+							tr_count=0;
+						}
+						
+						if(y==temp_y&&$(this).hasClass("bingoColor")){
+							tr_count++;
+						}
+						if(tr_count==5){
+							bingo++;
+						}
+						
+					})
+				}
+				console.log(td_count+"/"+tr_count+"/"+bingo);
+				$("#bingoCnt").html("bingo:"+bingo);
+				});
+			});
+		</script>
+		 
+	</head>
+	<body>
+		<table border="1" id="bingo">
+		
+		</table>
+		<div id="bingoCnt"></div>
+	</body>
+</html>

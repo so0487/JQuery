@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="utf-8"/>
+        <script>
+           //1)번 예제요
+           document.write("<hr><h1>Json의 Key:Value이해</h1>");
+           function jsontest() {
+               //json은 key ,value 값으로 구성되어 있다(Map과 유사한 형태)
+               var obj = {     "name" : "1조",   //String
+                             "age"  :  29,   //int
+                             "job"   : null,   //null
+                             "state"  : true,//boolean
+                        }
+               var arr = [ "1조", 29, null, true , obj]; 
+              
+               document.write("==========Json 객체========== <br/>");
+                document.write("\"key\" : \"value\" <br>");
+               for(var data in obj) {
+                   document.write("\"" + data + "\" : \"" + obj[data] + "\"<br>");
+               }
+               document.write("==========Json 배열========== <br/>");
+                document.write(" arr[index] = data <br/>");
+               for(var index in arr) {
+                   document.write(" arr[" + index + "] = " + arr[index] + "<br/>");
+               }
+              
+           }
+           jsontest();
+           
+           
+           //2)번예제요.
+         document.write("<hr><h1>JSON의 두 가지 메서드</h1>");
+           function jsonConvert() {
+               var java = '{ "NAME" : "1조", "AGE" : 29, "JOB" : null , "state" : true }';
+               console.log(java);
+               document.write(java + "<br/>");
+              
+               //String을  Json객체로 변환
+            document.write("<h3><li>parse메서드 : String을  Json객체로 변환</li></h3>");
+               var json = JSON.parse(java);
+               console.log(json);
+               document.write(json + "<br/>");
+              
+               //Json객체를 다시 String 변환
+            document.write("<h3><li>stringify메서드: Json객체를 다시 String 변환</li></h3>");
+               var java_str = JSON.stringify(json);
+               console.log(java_str);
+               document.write(java_str + "<br/>");
+           }
+         jsonConvert();
+        
+        </script> 
+    </head>
+    <body>
+    </body>
+</html>

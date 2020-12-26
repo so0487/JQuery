@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>imgElementCreate(이미지 태그 생성)</title>
+		
+	</head>
+	<body>
+	
+	
+	<!-- 
+	
+	
+		<ul>
+			<li>button_off</li>
+			<li>button_on</li>
+			<li>icecream</li>
+		</ul>
+		<button onclick="createImg();">실행</button>
+		<script>
+			function createImg(){
+				var list = document.getElementsByTagName("ul")[0];
+				
+				var li = list.getElementsByTagName("li");
+				
+				
+				for(var i=0;i<li.length;i++){
+					var strImg = li[i].firstChild.data;
+					//alert(strImg);
+					
+					var imgEle = document.createElement("img");
+					imgEle.src ="../img/"+strImg+".jpg";
+					imgEle.width = 100;
+					imgEle.height = 100;
+					
+					li[i].appendChild(imgEle);
+				}
+			}
+		</script>
+		
+		
+		 -->
+		
+		
+		
+		
+		
+		
+		<!-- 
+			각 텍스트를 클릭하면 이미지가 나오도록 수정
+		
+		 -->
+		<ul>
+<!-- 			<li onclick="liClick(this);">button_off</li> -->
+ 			<li>button_off</li>
+			<li>button_on</li>
+			<li>icecream</li>
+		</ul>
+ 		<button onclick="createImg();">실행</button>
+		<script>
+			
+				var list = document.getElementsByTagName("ul")[0];
+				
+				var li = list.getElementsByTagName("li");
+				
+				for(var i=0;i<li.length;i++){
+					li[i].onclick = function(){
+						liClick(this);
+					}
+				}
+				
+				function liClick(obj){
+					var imgsrc = obj.firstChild.data;
+					
+					var imgTag = document.createElement("img");
+					imgTag.src="../img/"+imgsrc+".jpg";
+					imgTag.width = 100;
+					imgTag.height = 100;
+					
+					obj.appendChild(imgTag);
+				}
+		
+		</script>
+	</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>form_val</title>
+		<script src="../js/jquery-3.5.1.min.js"></script>
+		<script>
+			/*전송 버튼 바로 뒤에 div를 생성 후 입력한 값을 넣어준다.*/
+			$(function(){
+				$("#btnview").click(function(){
+					var result = "";
+					
+					result += "이름:"+$("input[name=name]").val()+"<br>";
+					result += "성별:"+$("input[name=gender]:checked").val()+"<br>";
+					result += "직업:"+$("select[name=work] option:selected").val()+"<br>";
+					result += "소개:"+$("textarea[name=introduce]").val()+"<br>";
+					
+					
+					var obj = $("<div/>").html(result);
+					
+					$(this).after(obj);
+					
+					return false;
+				});
+				
+				
+ 				
+				$("#btnchange").click(function(e){
+					
+					
+					//버튼의 원래 기능인 자동 submit기능을 막아준다
+					//return false;와 동일
+					
+					e.preventDefault();
+					
+					$("input[name='name']").val("유동준");
+					
+					
+					
+					
+					//여자로 체크 했으면 남자로 체크를 변경
+					//남자로 체크 했으면 여자로 체크 변경
+					
+					$("#ma").prop("checked", !$("#ma").prop("checked"));
+					$("#fe").prop("checked", !$("#ma").prop("checked"));
+										
+				}); 
+			});
+		
+		</script>
+	</head>
+	<body>
+<!--  		<form> -->
+ 		<form action="result.jsp">
+			이름:<input type="text" name="name" id="name"><br>
+			성별 :	<input type="radio" name="gender" value="남자" id="ma" >남자&nbsp;&nbsp;&nbsp;
+				 	<input type="radio" name="gender" value="여자" id="fe">여자<br>
+			직업 : 	<select name="work">
+						<option value="프로그래머">프로그래머</option>
+						<option value="학생">학생</option>
+						<option value="개발자">개발자</option>
+					</select><br>
+			<hr>
+			소개 : <textarea name="introduce"></textarea><br>
+			
+			
+<!-- 			<button >전송</button> -->
+			<button id="btnview">전송</button>
+			<button id="btnchange">이름변경</button>
+			
+			
+					
+		</form>
+	</body>
+</html>

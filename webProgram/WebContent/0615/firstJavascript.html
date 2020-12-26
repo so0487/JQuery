@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>firstJavascript</title>
+		<script src="myscript.js"></script>
+		<script>
+			//var now = new Date();
+			//now = new Date();		/*var은 생략도 가능 하지만 붙여주는 것이 좋다.*/
+			//document.write(now);
+			
+			alert("안녕하세요?");
+			
+			
+			var check = confirm("확인 또는 취소를 눌러주세요");
+			//alert(check);
+			
+			
+			if(check){
+				alert("확인을 눌렀습니다.");
+			}else{
+				alert("취소를 눌렀습니다.");
+			}
+			
+ 			function clickBtn() {
+				alert("버튼을 눌렀습니다.");
+			} 
+		</script>
+	</head>
+	<body>
+		<button style="background-color: green" onclick="clickBtn();">버튼을 눌러주세요!</button>
+	</body>
+</html>

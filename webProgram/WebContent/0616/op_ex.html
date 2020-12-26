@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>op_ex(연산자 문제)</title>
+		<script>
+			/*
+				숫자2개와 연산자1개를 prompt로 입력받아서 연산자에 맞는 계산결과를 
+				브라우저에 출력하세요(prompt 총 3개를 입력받는다.)
+				(eval은 사용하지 않는다.)
+			
+			*/
+			
+			var num1 = prompt("첫번째 숫자를 입력하세요");
+			var op = prompt("연산자를 입력하세요");
+			var num2 = prompt("두번째 숫자를 입력하세요");
+			var result;
+			
+
+			if(op=="+"){
+				result = parseInt(num1)+parseInt(num2);
+				document.write(num1+op+num2+"="+result);
+			}else if(op=="-"){
+				result = parseInt(num1)-parseInt(num2);
+				document.write(num1+op+num2+"="+result);
+			}else if(op=="*"){	
+				result = parseInt(num1)*parseInt(num2);
+				document.write(num1+op+num2+"="+result);
+			}else if(op="/"){
+				result = parseInt(num1)/parseInt(num2);
+				document.write(num1+op+num2+"="+result);	
+			}else{
+				document.write("잘못입력하셨습니다.");
+			}
+			
+
+			 
+			 
+	
+		
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

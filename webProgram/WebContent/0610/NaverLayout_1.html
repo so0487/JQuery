@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>NaverLayout</title>
+		<style>
+		
+		
+		/*tip영역*/
+		#tip{
+			width: 100%;
+			height: 60px;
+			
+			background-color: #00CBAE;
+			
+			margin: 0 auto;
+			
+		}
+		
+		/*tip영역 중 실제 표시될 영역*/
+		#tip_linkBanner{
+		
+			width: 1130px;
+			height: 60px;		
+			margin: 0 auto;
+		}
+		
+		/*whale로고의 영역*/
+		#whale_logo{
+		
+			width: 10%;
+			height: 60px;;
+			background-image: url('../img/naver/naver-whale_logo.jpg');
+			background-size: 110px, 60px;
+			background-repeat:no-repeat;
+			float: left;
+			margin-top: 20px;
+			
+		}
+		/*tip이미지 영역*/
+		#tip_img{
+			float: left;
+			margin: 0 auto;
+		}
+		
+		/*whale을 설명하는 텍스트가 입력되는 영역*/
+		#whale_text{
+			width: 60%;
+			height: 60px;
+			color: white;
+			font-size: 13pt;
+			float: left;
+			margin: 0 auto;
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/*header영역*/
+		
+		/*header전체*/
+		#header{
+			clear both;
+			width: 100%;
+			height: 160px;
+			
+			background-color: white;
+			margin: 0 auto;
+			
+			
+		}
+		
+		/*실제 사용되는 header영역*/
+		#logoArea{
+			width: 1130px;
+			height: 160px;
+			
+			background-color: white;
+			float: left;
+			margin: 0 auto;
+		}
+		
+		#logoImg{
+			width: 20%;
+			height: 130px;
+			
+			float: left;
+			margin-left: 50px;
+			margin-top: 30px;
+			
+		}
+		
+		#searchBar{
+		
+			width: 590px;
+			height: 130px;
+			
+			float: left;
+			
+			margin-left: 50px;
+			margin-top: 30px;
+			
+			
+		}
+		
+		#searchBtn{
+		
+			float: left;
+			margin-top: 30px;
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		#nav{
+			clear both;
+			width: 100%;
+			height: 60px;
+			background-color: white;
+			
+			float: left;
+		
+		}
+		
+		
+		
+		#menuBar{
+		
+		
+			width: 100%;
+			height: 60px;
+			background-color: white;
+			letter-spacing: 3px;
+			
+			margin:0 auto;
+			float: left;
+			font-weight: bold;
+		}
+		
+		
+	
+		ul{
+			list-style: none;
+		}
+		
+		ul li{
+		
+			display: inline;
+
+		}
+		
+		ul li a{
+			text-decoration: none; 
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		#content{
+			clear both;
+			width: 100%;
+			height: 1000px;
+			
+			background-color: fuchsia;
+		
+		}
+		
+		#cont_left{
+			width: 60%;
+			height: 1000px;
+			background-color: lime;
+			
+			float: left;
+			
+		}
+		
+		
+		#news{
+			width: 100%;
+			height: 100px;
+			background-color: white;
+		
+		
+		}
+		
+		
+		
+		
+		
+		
+		#cont_right{
+			width: 40%;
+			height:1000px;
+			
+			background-color: olive;
+			
+			float: left;
+			
+		}
+		
+		#login{
+			width: 100%;
+			height: 200px;
+			
+			background-color: #dae1e6;
+		
+		}
+		
+		
+
+			
+		
+		
+		#footer{
+			clear both;		
+			width: 100%;
+			height: 430px;
+			
+			background-color: maroon;
+			
+		}
+		
+		
+		
+		#layer{
+		
+			width: 300px;
+			height: 300px;
+			
+			background-color: black;
+			
+			position: absolute;
+    		top: 100px;
+   			left: 100px;
+			background-image: url("../img/strawberries.jpg");
+			background-size: 300px;
+			
+			z-index: 2;
+		
+		}
+		
+		
+		#layer .btn{
+		
+			width: 30px;
+			height: 30px;
+		/* 		
+			position: absolute;
+			left: 270px	
+			
+		 */
+		 
+		 	float: right;
+		}
+		
+		
+		#layer2{
+			border: 5px solid red;
+			width: 300px;
+			height: 300px;
+			
+			background-color: black;
+			
+			position: absolute;
+    		top: 150px;
+   			left: 150px;
+			background-image: url("../img/strawberries.jpg");
+			background-size: 300px;
+			
+			z-index: 1;
+		
+		
+		}
+		
+		#layer .btn2{
+		
+			width: 30px;
+			height: 30px;
+		/* 		
+			position: absolute;
+			left: 270px	
+			
+		 */
+		 
+		 	float: right;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="tip">
+			<div id=tip_linkBanner href="">
+				<div id="whale_logo"></div>
+				<div id="tip_img"><img src = "../img/naver/naver_tip_img.png" width="150px" height = "60px"></div>
+				<div id="whale_text">
+				<p>인터넷의 새로운 시작! <span style="text-decoration: underline;">네이버웨일</span>로 차원이 다른 웹서핑을 경험해보세요!</p>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div id="header">
+			<div id="logoArea">
+				<div id="logoImg"><img src="../img/naver/naver.png" width="220px" height="60px"></div>
+				<div id="searchBar"><input type="text"style="width: 590px; height: 60px; border: 1px solid green;"></div>
+				<div id="searchBtn"><input type="image" src="../img/naver/searchBtn.PNG" width="60px;" height="64px;"></div>
+			
+			</div>
+		</div>
+		
+		
+		<div id="nav">
+			<div id= menuBar>
+				<ul>
+					<li><a href="" style="color: green">메일</a></li>
+					<li><a href=""style="color: green">카페</a></li>
+					<li><a href=""style="color: green">블로그</a></li>
+					<li><a href=""style="color: green">지식iN</a></li>
+					<li><a href=""style="color: green">쇼핑</a></li>
+					<li><a href=""style="color: green">Pay</a></li>
+					<li><a href=""style="color: green">TV</a></li>
+					<li><a href="">사전</a></li>
+					<li><a href="">뉴스</a></li>
+					<li><a href="">증권</a></li>
+					<li><a href="">부동산</a></li>
+					<li><a href="">지도</a></li>
+					<li><a href="">영화</a></li>
+					<li><a href="">뮤직</a></li>
+					<li><a href="">책</a></li>
+					<li><a href="">웹툰</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		
+		
+		<div id="content">
+			<div id="cont_left">
+				<div id="banner"><img src = "../img/banner.jpg" width="100%"></div>
+				<div id="news">news</div>
+			
+			</div>	
+			
+			
+			<div id="cont_right">
+				<div id="login"><input type="button" name="login" value="NAVER로그인"></div>
+			
+			
+			</div>
+		</div>
+		
+		
+		
+		<div id="footer"></div>	
+		
+		<div id="layer">
+			<input type="button" value="닫기" class="btn" onclick="layerClose();">
+		</div>
+		
+		
+		<div id="layer2">
+			<input type="button2" value="닫기" class="btn" onclick="layerClose();">
+		</div>
+		
+		<script>
+			function layerClose(){
+				
+			document.getElementById("layer").style.display="none";
+			}
+		</script>
+	</body>
+</html>

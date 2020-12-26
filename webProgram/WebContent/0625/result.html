@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script>
+			//alert(location.href);
+			//http://localhost:8082/webProgram/0625/result.html?id=aaa&pw=bbb
+			var url = location.href;
+			var param =	url.split("?");
+					
+			//alert(param[1]);	
+			
+			var params = param[1].split("&");
+					
+			var value = "";
+			var key = "";
+			
+			for(var i in params){
+			/* 	console.log(params[i]); */
+				key = params[i].split("=")[0];
+				value = params[i].split("=")[1];
+				
+				document.write(key +":"+value+"<br>");
+			}
+					
+					
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

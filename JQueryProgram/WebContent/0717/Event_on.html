@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>event_on</title>
+		<script src="../js/jquery-3.5.1.min.js"></script> 
+		<style>
+			p{ border: 1px solid black;}
+		</style>
+		<script>
+			$(function(){
+				/*
+					on() : 하나의 selector에 여러 이벤트를 적용할 때 사용
+				*/
+				
+				
+				/*
+				$("p").on({
+					mouseover:function(){$("body").css("background-color","yellow");},
+					mouseout:function(){$("body").css("background-color","blue");},
+					click:function(){$("body").css("background-color","gray");}
+				});	
+				*/	
+				$("button").click(function(){
+					//매치된 요소에 대해 이벤트를 적용한다.
+					
+					$("p").trigger("myEvent",["dana"]);
+				});
+				
+				//myEvent 새롭게 정의
+				$("p").on("myEvent", function(event, showname){
+					$(this).text(showname+" 출력했습니다! ").show();
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<button>클릭해보세요.</button>
+		<p>p태크 입니다.</p>
+	</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>String객체</title>
+		<link href="string.css?ver=1" rel="stylesheet">
+		<script src="string.js?ver=2"></script>
+	</head>
+	<body>
+		<div id="box" class="divBox">
+			<h2>charAt() 메서드</h2>
+			<p>
+				charAt(index) : index위치에 있는 문자를 리턴한다. 
+			</p>
+			<button onclick="proc1();">charAt()실행</button>
+		</div>
+		<div id="box" class="divBox">
+			<h2>charCodeAt() 메서드</h2>
+			<p>
+				charCodeAt(index) : index위치에 있는 유니코드를 리턴한다. 
+			</p>
+			<button onclick="proc2();">charCodeAt()실행</button>
+		</div>
+		<div id="box" class="divBox">
+			<h2>indexOf() 메서드</h2>
+			<p>
+				indexOf("문자열") : 부분 문자열의 위치(index)를 검색한다
+				indexOf(param1, param2) : param1 - 문자열 
+				                          param2 - 검색시작 인덱스
+			</p>
+			<button onclick="proc3();">indexOf()실행</button>
+		</div>
+		<div id="box" class="divBox">
+			<h2>lastIndexOf() 메서드</h2>
+			<p>
+				lastIndexOf("문자열") : 부분 문자열의 위치(index)를 뒤에서 부터 검색한다
+				lastIndexOf(param1, param2) : param1 - 문자열 
+				                              param2 - 검색시작 인덱스
+				                              
+				배열과 동일하게 indexOf로 없는 문자를 찾으려하면 -1이 리턴된다 				                              
+			</p>
+			<button onclick="proc4();">lastIndexOf()실행</button>
+		</div>
+		<div id="box" class="divBox">
+			<h2>concat() 메서드</h2>
+			<p>
+				s1.concat(s2,s3,s4.....) 
+				: s1문자열과 s2문자열을 연결한다. 
+				+ 연산자를 더 많이 사용한다. 
+				  				                              
+			</p>
+			<button onclick="proc5();">concat()실행</button>
+		</div>
+		<div id="box" class="divBox">
+			<h2>trim() 메서드</h2>
+			<p>
+				trim() : 앞 뒤 공백을 제거한다 
+				** 문자열에 앞뒤 공백이 있더라도  innerHTML로 들어가게 되면
+				브라우저 상에서는 공백이 제거된 상태로 보인다. 
+				(F12 develop tool에서 확인한다)  				                              
+			</p>
+			<button onclick="proc6();">trim()실행</button>
+		</div>
+		<div id="box" class="divBox">
+			<h2>toLowerCase(), toUpperCase() 메서드</h2>
+			<p>
+				toLowerCase() : 소문자로 변경
+				toUpperCase() : 대문자로 변경				                              
+			</p>
+			<button onclick="proc7();">toLowerCase()실행</button>
+			<button onclick="proc8();">toUpperCase()실행</button>
+		</div>	
+		
+		<div id="box" class="divBox">
+			<h2>substring() 메서드</h2>
+			<p>
+				substring(from, to) : 두 위치 사이의 부분 문자열을 출력한다 
+				to를 생략하면 뒤쪽 모든 문자열을 출력한다.
+				to 미만까지 출력한다  	
+				cf)substr(from, count) : from 인덱스부터 count개수만 추출
+				substring(1,4); //1~3까지만 문자열 추출
+				substr(1,4); //1부터 글자수 4개를 추출한다 	                               
+			</p>
+			<button onclick="proc9();">substring()실행</button>
+			
+		</div>	
+		<div id="box" class="divBox">
+			<h2>slice() 메서드</h2>
+			<p>
+				slice(start,end) : 
+				start부분부터 end까지 부분 문자열을 추출한다
+				
+				substring()과 차이점은 slice()는 음수 값을 파라미터로 적용하여
+				문자열을 뒤에서 부터 출력 할 수 있다.
+				**substring()은 음수 사용 불가능
+					                              
+			</p>
+			<button onclick="proc10();">slice()실행</button>
+			
+		</div>			
+		<div id="box" class="divBox">
+			<h2>split() 메서드</h2>
+			<p>
+				split() :구분자를 기준으로 문자열을 분리한다
+					                              
+			</p>
+			<button onclick="proc11();">split()실행</button>
+			
+		</div>			
+		
+		<div id="result"></div>
+		<br><br><br><br><br><br><br><br><br>
+		<br><br><br><br><br><br><br><br><br>
+		<br><br><br><br><br><br><br><br><br>
+		<br><br><br><br><br><br><br><br><br>
+	</body>
+</html>
+
+
+
+
+
+
+

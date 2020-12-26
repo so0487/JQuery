@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>mouseEvent</title>
+		<style>
+			#box, #box2{
+				border: 2px dashed red;
+				background-color: yellow;
+				width: 200px;
+				height: 200px;
+			}
+		</style>
+		<script>
+			function onMover(obj) {
+				//마우스를 올렸을 때 이벤트
+				obj.style.border = "2px solid blue";
+			}
+			
+			function onMout(obj) {
+				//마우스가 빠져나왔을 때 이벤트
+				//배경색을 흰색으로 변경해보세요
+				obj.style.backgroundColor = "white";
+			}
+			
+			function onMdown(obj) {
+				//마우스 클릭했을 때
+				obj.style.color="#55eeff";
+				
+			}
+			
+			function onMup(obj) {
+				//마우스 클릭 후 떼었을 때
+				obj.style.color="red";
+			}
+			
+
+			
+			
+		</script>
+	</head>
+	<body>
+		<div id="box" onmouseover="onMover(this);" onmouseout="onMout(this);">마우스를 이 요소 위에 이동하세요</div>
+		
+		<button onmousedown="onMdown(this);" onmouseup="onMup(this);">눌러보세요!</button>
+		
+		<!-- 
+		
+			id가 box2인 div를 하나 만들고
+			<div id="">abcdef</div>
+			해당하는 div를 클릭할 경우 안에 있는 텍스트가 대문자로 변경되게 해주세요.
+		 -->
+		
+		<div id="box2" onmousedown="toUpper(this)">abcdef</div>
+		
+		<script>
+			function toUpper(obj){
+				console.log(obj.innerHTML);
+				obj.innerHTML = obj.innerHTML.toUpperCase();
+				
+			}
+		</script>
+		
+
+	</body>
+</html>

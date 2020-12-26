@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>moefHomepage</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		</head>
+	<body>
+		<div id="wrapAll">
+			<div id="headerSection">
+				<div id="wrapNav">
+					<div id="nav" style="color: white; font-weight: bold;">
+						<div id="navContent">
+							<div id="homeImg"><a href="http://kids.moef.go.kr/main.do"><img src="../img_money/home.gif" width="43px" height="35px"></a></div><!-- homeImg -->
+							<div id=navMenu><img src="../img_money/navMenu.gif" width="43px"height="35px;"></div><!-- navMenu -->
+							<div id=main-flag><a href="https://www.mois.go.kr/frt/sub/popup/p_taegugki_banner/screen.do"><img src="../img_money/main-flag.png" width="88px;" height="35px;"></a></div><!-- main-flag -->
+							<div id="glb-print"><img src="../img_money/glb-print.png" width="35px"height="35px"></div><!-- glb-print -->
+							<div id="glb-plus"><img src="../img_money/glb-plus.png" width="19px"height="19px"></div><!-- glb-plus -->
+							<div id="displayReset"><a>기본</a></div><!-- displayReset -->
+							<div id="glb-minus"><img src="../img_money/glb-minus.png" width="19px"height="19px"></div><!-- glb-minus -->
+							<div id="moef">
+								<div id="moefText"><a href="http://www.moef.go.kr/">기획재정부</a>	</div><!-- moefText -->
+							</div><!-- moef -->
+						</div><!-- navContent -->
+					</div><!-- nav -->
+				</div><!-- wrapNav -->
+				
+				
+				
+					<div id="header" style="color: white; font-weight: bold;">
+						<div id="headerCont">
+							<div id="mosf-mi"><a href="http://kids.moef.go.kr/main.do"><img src="../img_money/mosf-mi.png" width="270px" height="60px"></a></div><!-- mosf-mi -->
+							<div id="menu1"><a href="http://kids.moef.go.kr/intro/weIntro.do"><img src="../img_money/menu1.gif" width="137px" height="20px"></a></div><!-- menu1-->
+							<div id="menu2"><a href="http://kids.moef.go.kr/class/intrstClass.do"><img src="../img_money/menu2.gif" width="136px" height="20px"></a></div><!-- menu2-->
+							<div id="menu3"><a href="http://kids.moef.go.kr/play/scolar.do"><img src="../img_money/menu3.gif" width="104px" height="20px"></a></div><!-- menu3-->
+							<div id="menu4"><a href="http://kids.moef.go.kr/news/rescRoomList.do?boardCd=RR001"><img src="../img_money/menu4.gif" width="153px" height="20px"></a></div><!-- menu4-->
+						</div><!-- headerCont -->
+					</div><!-- header -->
+			</div><!-- headerSection -->
+	
+	
+	
+	
+			<div id="wrapBody">
+				<div id=wrapBodySection>
+				
+ 					<div id="section1">
+<!-- 						<div id="a1" style="color: white; font-weight: bold;">a1</div>a1 -->
+<!-- 						<div id="a2" style="color: white; font-weight: bold;">a2</div>a2 -->
+<!-- 						<div id="a3" style="color: white; font-weight: bold;">a3</div>a3 -->
+<!-- 						<div id="a4" style="color: white; font-weight: bold;">a4</div>a4 -->
+					
+					
+					
+						<div id = "A" onclick="location.href='http://kids.moef.go.kr/class/intrstClass.do#section03';">
+							<div class="flip-card">
+								<div class="flip-card-inner">
+							    	<div id="a1" class="a" class="flip-card-front">
+										<span class="aBold">우리 집</span>에도&nbsp; <span class="aBold">경제</span>가 있어요
+										<img src="../img_money/main-a1.png" class="aImg" alt="우리집 경제">
+									</div>
+							    	<div class="flip-card-back">
+										<img src="../img_money/main-a1b.png" alt="우리집 경제">
+							      	</div>
+							  	</div>
+							</div>
+						</div>
+						
+						<div id = "B" onclick="location.href='http://kids.moef.go.kr/class/intrstClass.do#section03';">
+							<div class="flip-card">
+								<div class="flip-card-inner">
+							    	<div id="a2" class="a" class="flip-card-front">
+										<span class="aBold">시장</span>속에&nbsp; <span class="aBold">경제</span>가  숨어있어요
+										<img src="../img_money/main-a2.png" class="aImg" alt="시장경제">
+									</div>
+							    	<div class="flip-card-back">
+										<img src="../img_money/main-a2b.png" alt="시장경제">
+							      	</div>
+							  	</div>
+							</div>
+						</div>
+						
+						
+						<div id = "C" onclick="location.href='http://kids.moef.go.kr/class/intrstClass.do#section03';">
+							<div class="flip-card">
+								<div class="flip-card-inner">
+							    	<div id="a3" class="a" class="flip-card-front">
+										<span class="aBold">기업</span>속에&nbsp; <span class="aBold">경제</span>가 숨어있어요
+										<img src="../img_money/main-a3.png" class="aImg" alt="기업경제">
+									</div>
+							    	<div class="flip-card-back">
+										<img src="../img_money/main-a3b.png" alt="기업경제">
+							      	</div>
+							  	</div>
+							</div>
+						</div>
+						
+						<div id = "D" onclick="location.href='http://kids.moef.go.kr/class/intrstClass.do#section03';">
+							<div class="flip-card">
+								<div class="flip-card-inner">
+							    	<div id="a4" class="a" class="flip-card-front">
+										<span class="aBold">시장</span>속에&nbsp; <span class="aBold">경제</span>가  숨어있어요
+										<img src="../img_money/main-a4.png" class="aImg" alt="우리나라 경제">
+									</div>
+							    	<div class="flip-card-back">
+										<img src="../img_money/main-a4b.png" alt="우리나라 경제">
+							      	</div>
+							  	</div>
+							</div>
+						</div>
+						
+						
+ 					</div><!-- section1 -->
+				</div><!-- wrapBodySection -->
+				
+				
+				
+				
+	
+				<div id="section2">
+					<div id="section2Cont">
+						<div id="section2Text"><img src="../img_money/s2Text.png" alt="section2Text"width="209px"height="69px;"></div><!-- section2Text -->
+						<div id="main_i01"><a href="http://kids.moef.go.kr/play/scolar.do"><img src="../img_money/main-i01.png"></a></div><!-- main-i01 -->
+						<div id="main_i02"><a href="http://kids.moef.go.kr/play/limit.do"><img src="../img_money/main-i02.png"></a></div><!-- main-i02 -->
+						<div id="main_i03"><a href="http://kids.moef.go.kr/play/keins.do"><img src="../img_money/main-i03.png"></a></div><!-- main-i03 -->
+						<div id="main_i04"><a href="http://kids.moef.go.kr/play/currency.do"><img src="../img_money/main-i04.png"></a></div><!-- main-i04 -->
+					</div><!-- section2Cont -->
+				</div><!-- section2 -->
+	
+				<div id="section3">
+					<div id=section3Cont>
+						<div id=center-banner><a href="http://kids.moef.go.kr/news/mvpStdList.do?boardCd=MS001"><img src="../img_money/center-banner.png.png"></a></div><!-- center-banner -->
+					</div><!-- section3Cont -->
+				</div><!-- section3 -->
+				
+	
+				<div id="section4">
+					<div id=sectioin4Cont>
+					</div><!-- section4Cont -->					
+				</div><!-- section4 -->
+			</div><!-- wrapBody -->
+	
+	
+	
+	
+			
+			<div id="wrapFoot">
+				<div id="footer">
+					<div id="footCont"></div><!-- footCont -->
+				</div><!-- footer -->
+			</div><!-- wrapFoot -->
+		</div><!-- wrapAll -->
+	</body>
+</html>

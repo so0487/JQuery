@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JQueryEvent</title>
+		<script src="../js/jquery-3.5.1.min.js"></script> 
+		<script>
+			$(function(){
+				$("button").click(function(){
+					alert("버튼이 눌렸습니다.");
+				});
+				
+				$("img").dblclick(function(){
+					$(this).hide();
+				});
+				
+				
+				
+				
+				/*
+					버블링 현상 : mouseover 이벤트에서 발생한다.
+					동일한 태그의 경계선을 넘나들때 지속적으로 이벤트가 발생하는 것
+				*/
+				
+				
+				
+				
+				/*
+				$("div").mouseover(function(){
+					console.log("div mouseover");
+				});
+				
+				//mouseout은 마우스를 해당 영역에서 벗어나게 했을 때 발생하는 이벤트
+				(버블링 발생한다.)
+				*/
+				
+				
+				$("div").mouseenter(function(){
+					console.log("div mouseenter");
+				});
+			//mouseenter : 버블링이 발생하지 않는다
+			//mouseleave : 마우스를 해당 영역에서 벗어나게 했을 때 발생하는 이벤트
+			//(버블링 발생하지 않는다.)
+				
+			});
+		</script>
+		<style>
+			#outerBox{
+				width: 500px;
+				height: 500px;
+				border: 1px solid black;
+			}
+			
+			#innerBox{
+				width: 300px;
+				height: 300px;
+				border: 1px solid black;
+				margin: 50px;
+				background-color: yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<button onclick="alert('버튼이 눌렸습니다.(2)')">클릭해보세요.</button>
+		<!-- 버튼이 눌렸습니다(2) 먼저 실행 후 버튼이 눌렸습니다. 실행 -->
+		
+		<br>
+		
+		<img src="../img/puppy.jpg" width="200" alt="강아지">
+		
+		<hr>
+		
+		<div id="outerBox">
+			<div id="innerBox"></div>
+		</div>
+		
+	</body>
+</html>

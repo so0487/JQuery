@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>selectElement_Ex(셀렉트 요소 추가 문제)</title>
+		<style>
+			table select {
+				width: 180px;
+				height:240px;
+				box-sizing:border-box;
+			}
+			input[type=button]{
+				width:70px;
+			}
+			.box table{
+				margin : 0 auto;
+			}
+		
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<form name="ff">
+				<table>
+					<tr>
+						<td colspan="3">
+							<h1>select 예제</h1>
+							<h2>데이터를 교환하는 프로그램</h2>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<select name="Llist" size="15">
+								<!-- <option value="값">값</option> -->
+							</select>
+						</td>
+						<td>
+							<input type="button" onclick="toRight();"  value=">"><br>
+							<input type="button" onclick="toRightAll();" value=">>"><br>
+							<input type="button" onclick="toLeft();" value="<"><br>
+							<input type="button" onclick="toLeftAll();" value="<<"><br>						
+						</td>
+						<td>
+							<select name="Rlist" size="15"></select>						
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3" style="text-align: center;">
+							<input type="text" name="txt">
+							<input type="button" onclick="add();" value="추가하기">
+						</td>
+					</tr>
+				
+				</table>
+			</form>
+		</div>
+		<script>
+			function add(){
+				var f = document.ff;
+				var num = f.txt.value;
+				
+				/* alert(num); */
+				
+				console.log(f.Llist.selectedIndex);
+				
+				//<option value="값">값</option>
+				var opt = document.createElement("option");
+				opt.value = num;
+				opt.text = num;
+				
+				f.Llist.appendChild(opt);
+			}
+			
+			function toRight(){
+				var f = document.ff;
+				var index = f.Llist.selectedIndex;
+				
+				var opt = f.Llist.options[index].value;
+				
+				/*opt값을 우측 select option안에 넣어주세요.*/
+				var opt2 = document.createElement("option");
+				opt2.value = opt;
+				opt2.text = opt;
+				
+				f.Rlist.appendChild(opt2);
+				
+				f.Llist.removeChild(f.Llist.options[index]);
+				
+			}
+			
+			
+			function toRightAll(){
+				var f = document.ff;
+				
+				for(var i=f.Llist.length-1;i>=0;i--){
+					var opt = f.Llist.options[i].value;
+					var optTag = document.createElement("option");
+					
+					optTagvalue = opt;
+					optTag.text = opt;
+					
+					
+					f.Rlist.appendChild(optTag);
+					
+					f.Llist.removeChild(f.Llist.options[i]);
+				}
+			}
+			
+			
+	 		function toLeft(){
+				var f = document.ff;
+				var index = f.Rlist.selectedIndex;
+				
+				var opt = f.Rlist.options[index].value;
+				
+				/*opt값을 우측 select option안에 넣어주세요.*/
+				var opt2 = document.createElement("option");
+				opt2.value = opt;
+				opt2.text = opt;
+				
+				f.Llist.appendChild(opt2);			
+				f.Rlist.removeChild(f.Rlist.options[index]);	
+			}
+	 		
+	 		
+	 	
+			function toLeftAll() {
+				var f = document.ff;
+
+				for (var i = f.Rlist.length - 1; i >= 0; i--) {
+					var opt = f.Rlist.options[i].value;
+					var optTag = document.createElement("option");
+
+					optTagvalue = opt;
+					optTag.text = opt;
+
+					f.Llist.appendChild(optTag);
+
+					f.Rlist.removeChild(f.Rlist.options[i]);
+				}
+			}
+		</script>
+	</body>
+</html>

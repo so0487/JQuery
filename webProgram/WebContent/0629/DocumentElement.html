@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>DocumentElement</title>
+	</head>
+	<body>
+		<div id="result">
+			<p>
+				- childNode			:	모든 자식요소	<br>
+				- firstChild		:	첫번째 자식요소	<br>
+				- lastChild			:	마지막 자식 노드	<br>
+				- parentNode		:	현재 노드의 부모노드	<br>
+				- nextSibling		:	현재 노드의 다음 형제 노드	<br>
+				- previousSibling	:	현재 노드의 이전 형제 노드	<br>	
+			</p>
+			<ul>
+				<li>list item1</li>
+				<li>list item2</li>
+				<li>list item3</li>
+				<li>list item4</li>
+				<li>list item5</li>
+			</ul>
+			
+			
+			<div id="box">
+				<p>p태그 안에 내용입니다.</p>
+			</div>
+			
+			
+		</div>
+		
+		<script>
+
+			/*
+			 var list = document.getElementsByTagName("ul")[0];
+			 var allList = list.getElementsByTagName("li");
+
+			 for (var i = 0; i < allList.length; i++) {
+				 alert(allList[i].firstChild.data);
+			 }
+			 */
+			 
+			var ele = document.getElementById("box");
+			var p = ele.getElementsByTagName("p")[0];
+			//var p = ele.getElementsByTagName("p");
+			
+			alert(p.firstChild.data);
+			//alert(p[0].firstChild.data);
+			
+		</script>
+	</body>
+</html>

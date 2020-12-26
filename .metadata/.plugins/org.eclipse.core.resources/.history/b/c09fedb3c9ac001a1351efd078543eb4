@@ -1,0 +1,440 @@
+@CHARSET "UTF-8";
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+#wrapAll {
+	width: 100%;
+	height: 1200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*nav부분*/
+#nav {
+	width: 100%;
+	height: 35px;
+	background-color: #000000;
+}
+#wrapNav {
+	width: 100%;
+	height: 35px;
+}
+
+#navContent{
+	position: relative;
+	width: 1040px;
+	height: 35px;
+	margin: 0 auto;
+}
+
+#homeImg {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+#navMenu {
+	position: absolute;
+	top: 0px;
+	left: 44px;
+}
+
+#main-flag {
+	position: absolute;
+	top: 0px;
+	left: 87px;
+}
+#glb-print{
+	position: absolute;
+	right: 0px;
+}
+
+#glb-plus{
+	position: absolute;
+	right: 50px;
+	line-height: 45px;
+}
+#displayReset{
+	position: absolute;
+	color: white;
+	line-height: 35px;
+	right: 80px;
+}
+#glb-minus{
+	position: absolute;
+	right: 130px;
+	line-height: 50px;
+}
+#moef{
+	position: absolute;
+	color:white;
+	line-height: 35px;
+	right: 180px;
+	
+
+}
+
+#moefText{
+	color: white;
+}
+
+#moefText:VISITED{
+	color: white;
+}
+
+
+
+
+/*header부분*/
+#header {
+	width: 100%;
+	height: 150px;
+}
+
+#headerCont{
+	position: relative;
+	width: 1040px;
+	height: 150px;
+	margin: 0 auto;
+}
+
+#mosf-mi{
+	position: absolute;
+	top: 50px;
+}
+
+#menu1{
+	position: absolute;
+	top: 80px;
+	left: 350px;
+	
+}
+#menu2{
+	position: absolute;
+	top: 80px;
+	left: 540px;
+	
+	
+}
+#menu3{
+	position: absolute;
+	top: 80px;
+	left: 730px;
+	
+}
+#menu4{
+	position: absolute;
+	top: 80px;
+	right: 0px;
+	
+}
+
+
+
+
+
+
+
+
+
+
+/*body부분*/
+
+#wrapBody {
+	width: 100%;
+	padding: 5px;
+	background-color: #F2F2F2;
+}
+
+#wrapBodySection {
+	width: 1040px;
+	margin: 0 auto;
+}
+
+#a1 {
+	background-color: #CC5858;
+}
+
+#a2 {
+	background-color: #DF7E43;
+}
+
+#a3 {
+	background-color: #E1A84F;
+}
+
+#a4 {
+	background-color: #E6CD57;
+}
+
+#a5 {
+	background-color: #54b2e8;
+}
+
+#a6 {
+	background-color: #88b5cf;
+}
+
+#a7 {
+	background-color: #65a2b5;
+}
+
+#a8 {
+	background-color: cyan;
+}
+
+#A {
+	float: left;
+}
+
+#B {
+	float: left;
+}
+
+#C {
+	float: left;
+}
+
+#D {
+	float: left;
+}
+
+#E {
+	float: left;
+}
+
+#F {
+	float: left;
+}
+
+#G {
+	float: left;
+}
+
+#H {
+	float: left;
+}
+
+
+#section1 {
+	cursor: pointer;
+	margin: 10px 0;
+	width: 1080px;
+	margin: 0 auto;
+}
+
+/*  			
+			#section1{
+				width: 100%; height: 340px;
+				position: relative;
+			}
+			#a1,#a2,#a3,#a4{
+ 				width: 260px;	height: 340px; 
+ 				position: absolute; 
+			} 
+			
+ 			#a1{background-color: red; left: 130px;} 
+ 			#a2{background-color: orange;left: 390px;} 
+ 			#a3{background-color: #f2b872;left: 650px;} 
+ 			#a4{background-color: #d1ab41;left: 910px;} 
+						
+ */
+
+#section2 {
+	clear: both;
+	width: 100%;
+	height: 125px;
+	
+}
+#section2Cont{
+	width: 1040px;
+	height: 125px;
+	background-color: #464646;
+	margin: 0 auto;
+	position: relative;
+}
+
+#section2Text{
+	width:300px;
+	height:125px;
+	line-height: 170px;
+	position: absolute;
+	left: 20px;
+}
+
+#main_i01{
+	position: absolute;
+	left: 300px;
+}
+#main_i02{
+	position: absolute;
+	left: 500px;
+}
+#main_i03{
+	position: absolute;
+	left: 700px;
+}
+#main_i04{
+	position: absolute;
+	right: 0px;
+}
+
+
+#section3 {
+	width: 100%;
+	height: 118px;
+}
+
+
+#section3Cont{
+	width: 1040px;
+	height: 118px;
+	background-color: 000000;
+	margin: 0 auto;
+}
+
+
+#section4 {
+	cursor: pointer;
+	margin: 10px 0;
+	width: 1080px;
+	margin: 0 auto;
+}
+
+/* 		
+			#section4{
+				width: 100%; height: 340px;
+			
+				position: relative;
+			}
+			
+			
+			#a5,#a6,#a7,#a8{
+			
+				width: 260px; height: 340px;
+				position: absolute;
+				
+			}
+			
+			#a5{background-color: #54b2e8; left: 130px;}
+			#a6{background-color: #88b5cf;left: 390px;}
+			#a7{background-color: #65a2b5;left: 650px;}
+			#a8{background-color: cyan;left: 910px;}
+			
+			
+			
+			
+			 */
+
+
+
+
+
+
+
+
+/*footer부분*/
+#wrapFoot {
+	clear: both;
+	width: 100%;
+	height: 80px;
+	background-color: black;
+}
+#footer {
+	clear: both;
+	width: 100%;
+	height: 80px;
+	background-color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.flip-card {
+	background-color: transparent;
+	width: 260px;
+	height: 340px;
+	/*border: 1px solid #f1f1f1;*/
+	perspective: 1000px;
+}
+
+.flip-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+	transform: rotateY(180deg);
+}
+
+.flip-card-front,.flip-card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+}
+
+.flip-card-front {
+	background-color: #bbb;
+	color: black;
+}
+
+.flip-card-back {
+	background-color: dodgerblue;
+	color: white;
+	transform: rotateY(180deg);
+}
+/*------------------------------------------------------------*/
+.a {
+	margin: 0;
+	padding: 15px 20px;
+	color: white;
+	font-size: 14pt;
+	width: 220px;
+	height: 310px;
+	float: left;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.sec2Img {
+	float: right;
+	margin: 15px 15px 0;
+}
+
+.aImg {
+	margin: auto 0;
+	position: relative;
+	top: 40px;
+	left: 20px;
+}
+
+.aBold {
+	font-size: 22pt;
+	font-weight: bold;
+}

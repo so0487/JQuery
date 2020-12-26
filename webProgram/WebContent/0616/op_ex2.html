@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>op_ex2</title>
+		<script>
+			var p1 = prompt("첫 번째 사람의 가위 바위 보를 입력하세요");
+			var p2 = prompt("두번째 사람의 가위 바위 보를 입력하세요");
+			
+			if(p1==p2){
+				document.write("1번 플레이어 : "+p1+"<br>");
+				document.write("2번 플레이어 : "+p2+"<br>");
+				document.write("결과 : 비겼습니다."+"<br>");
+			}else if((p1=="가위"&&p2=="바위")
+					||(p1=="바위"&&p2=="보")
+					||(p1=="보"&&p2=="가위")){
+				document.write("1번 플레이어 : "+p1+"<br>");
+				document.write("2번 플레이어 : "+p2+"<br>");
+				document.write("2번 플레이어가 이겼습니다."+"<br>");
+			}else if((p1=="가위"&&p2=="보")
+					||(p1=="바위"&&p2=="가위")
+					||(p1=="보"&&p2=="바위")){
+				document.write("1번 플레이어 : "+p1+"<br>");
+				document.write("2번 플레이어 : "+p2+"<br>");
+				document.write("1번 플레이어가 이겼습니다."+"<br>");
+			}else{
+				document.write("잘못입력하셨습니다."+"<br>");
+			}
+			
+		</script>
+		
+	</head>
+	<body>
+		
+		
+		
+	</body>
+</html>

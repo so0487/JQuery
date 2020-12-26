@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>selector(선택자)</title>
+		<script src="../js/jquery-3.5.1.min.js"></script>
+		<script>
+			$(function(){
+				
+				/*
+					자식 엘리먼트와 후손엘리먼트를 선택한다.
+					h2의 자식 a태그 : $("h2>a")
+					h2의 후손 a태그 : $("h2 a") 
+				*/
+				
+				$("h2>a").css("border","2px solid green");
+				$("h2 a").css("backgroundColor","yellow")
+			});
+		</script>
+	</head>
+	<body>
+		<h2>
+			문단 안에 <a>링크</a>태그가 있다.<br>
+			두번째 <span><a>링크</a></span>는 손자이다.			
+		</h2>
+	</body>
+</html>

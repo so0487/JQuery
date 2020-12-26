@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>screen 객체</title>
+		<script>
+			console.log(screen);
+			
+			/*
+				screen객체
+				
+				availHeight : 	화면의 높이를 반환(상태표시줄을 제외한 영역)
+				availWidth	:	화면의 너비를 반환
+				width		:	화면의 전체 너비를 반환
+				Height		:	화면의 높이를 반환
+				colorDepth	:	화면의 컬러 팔레트의 비트 깊이를 반환
+				pixelDepth	:	화면의 컬러 해상도를 반환
+			*/
+			
+			
+			function maxOpen() {
+				var maxWin = window.open("new.html","","scrollbars=1, status=1, resize=1");
+				
+				maxWin.resizeTo(screen.availWidth, screen.availHeight)
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+		<a href="#" onclick="maxOpen();return false;">전체 화면 보기</a>
+	</body>
+</html>

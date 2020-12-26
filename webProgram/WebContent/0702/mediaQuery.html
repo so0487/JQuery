@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>mediaQuery</title>
+		<!-- 
+			반응형 웹 : 브라우저 , 기기마다 사용자에 따라 화면이 변경되는 기술
+			미디어 쿼리 : 미디어쿼리를 사용하면 컨텐츠 별로 변경하지 않아도
+			웹페이지에 접속하는 기기에 맞게 스타일이 조정된다
+		 -->
+		 <script>
+		 	window.onload = function(){
+			 	document.getElementById("result").innerHTML 
+			 	= screen.width;
+		 	}
+		 </script>
+		 
+		 <style>
+		 	body{
+		 		background-color:#ffbe00;
+		 	}
+		 	
+		 	/*0~1000px 일때까지 백그라운드 이미지를 가을배경으로 변경*/
+		 	@media screen and (max-width:1000px){
+		 		body{
+		 			background:url(../img/autumn.jpg);
+		 			background-size:500px 500px;	
+		 		} 	
+		 	}
+		 	
+		 	/*800px이하일 경우 이미지를 여름으로 변경*/
+		 	@media screen and (max-width:800px){
+		 		body{
+		 			background:url(../img/summer.jpg);
+		 			background-size:500px 500px;
+		 		}
+		 	}
+		 
+		 	/*600px이하면 봄이미지로 변경*/
+		 	@media screen and (max-width:600px){
+		 		body{
+		 			background:url(../img/spring.jpg);
+		 			background-size:500px 500px;
+		 		}
+		 	}
+		 
+		 </style>
+		 
+	</head>
+	<body>
+		<div id="result"></div>
+		<p>방탄소년단(한국 한자: 防彈少年團, 영어: BTS)은 2013년 6월 13일에 데뷔한 빅히트 엔터테인먼트 소속 대한민국의 7인조 보이 그룹이다.[1][2] '방탄소년단' 이라는 그룹명에는 방탄이 총알을 막아내는 것처럼, 살아가는 동안 힘든 일을 겪는 10대와 20대의 편견과 억압을 막아내고 자신들의 음악과 가치를 지켜내겠다는 의미를 담고 있다. 방탄소년단을 지칭하는 'BTS'는 본래 이름인 'Bangtan Boys' 혹은 'Bulletproof Boys Scouts'의 준말이었으며,[3] 2017년 빅히트 엔터테인먼트는 방탄소년단의 공식 로고를 교체하면서 과거와 미래를 아우르는 개념으로 의미를 확장시키고, 'Beyond The Scene'의 준말로 의미를 추가했다. 이는 매 순간 청춘의 장면들을 뛰어넘는다는 의미를 가지고 있다.</p>
+	</body>
+</html>
+
+
+
+

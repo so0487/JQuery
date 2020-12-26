@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Math</title>
+		<script>
+			/*
+				Math.PI						:	파이상수(3.14.........)
+				Math.abs(x)					:	절대값
+				Math.ceil(x)				:	올림
+				Math.floor(x)				:	내림----------
+				Math.round(x)				:	반올림---------
+				Math.max(1,2,3,4,5,6,7,)	:	최대값 추출
+				Math.min(1,2,3,4,5,6,7,)	:	최소값 추출
+				Math.pow(x,y)				:	x의 y승
+				Math.random()				:	0 부터 1 까지의 소수점 난수를 발생함------->주로 사용
+				
+				
+				원하는 범위의 랜덤값 만들기
+				Math.floor(Math.random()*(최대값-최소값+1)+최소값)
+				
+				Math.floor(Math.random()*(10-1+1)+1);
+				
+			*/
+			
+			
+			function proc1() {
+				var randomNum = Math.floor(Math.random()*10+1);
+				console.log(randomNum);
+				//var num = prompt("숫자를 입력");
+				
+				
+				/*
+				
+				문제1)
+				입력한 수와 랜덤수가 동일하면 alert("맞췄습니다"); alert("틀렸습니다")
+				*/
+			
+				
+				
+				/*
+				if(randomNum==num){
+					alert("맞췄습니다");
+				}else{
+					alert("틀렸습니다.");
+				}
+				
+				
+				*/
+				
+				
+				/*
+				문제2)
+				맞출때 까지 prompt를 띄우게 변경한 후 
+				alert("x번 만에 맞췄습니다.")*/
+				var count = 1;
+				while(true){
+					
+					var num = prompt("숫자를 입력");
+					console.log(num);
+					if(randomNum==num){
+						alert("맞췄습니다");
+						break;
+					}else{
+						alert("틀렸습니다.");
+						count++;
+					}
+
+				}
+				
+				document.write(count+"번 만에 성공하였습니다.");
+				
+			}
+			
+			
+			
+			function proc2() {
+				//가위, 바위, 보를 저장하는 배열 생성
+				var data = ["가위", "바위", "보"];
+				
+				//가위, 바위, 보 중 index번째 값을 뽑기 위한 난수 생성
+				var index = Math.floor(Math.random()*3);
+				
+				//컴퓨터의 가위, 바위, 보 값 입력
+				var com = data[index];
+					
+				console.log(com);
+				
+				//user의 값 입력
+				var user = prompt("가위, 바위, 보를 입력해주세요");
+				
+				console.log(user);
+				
+				if(com==user){
+					document.write("com : "+com+"<br>");
+					document.write("user : "+user+"<br>");
+					document.write("비겼습니다."+"<br>");
+					
+					
+				}else if((com=="가위"&&user=="보")
+						||(com=="바위"&&user=="가위")
+						||(com=="보"&&user=="바위")){
+					
+					document.write("com : "+com+"<br>");
+					document.write("user : "+user+"<br>");
+					document.write("com 승리");
+					
+					
+				}else if((com=="가위"&&user=="바위")
+						||(com=="바위"&&user=="보")
+						||(com=="보"&&user=="가위")){
+					
+					document.write("com : "+com+"<br>");
+					document.write("user : "+user+"<br>");
+					document.write("user 승리"+"<br>");
+				}else{
+					
+					document.write("잘못입력하셨습니다.");
+				}
+			}
+			
+			
+			
+			
+			
+
+			function proc3() {
+				for (var i = 0; i < 5; i++) {
+					var arr = new Array();
+					var j = 0;
+					while (arr.length < 6) {
+						var random = Math.floor(Math.random() * 45 + 1);
+						if (arr.indexOf(random)<0) {
+							arr[j] = random;
+							j++
+						}
+					}
+					document.write(arr + "<br>");
+				}
+
+			}
+		</script>
+	</head>
+	<body>
+		<div>
+			<h1>숫자 맞추기</h1>
+			<p>
+				1부터 10까지의 난수를 발생 후 사용자가 이 값을 맞추는 프로그램 작성
+			</p>
+			<button onclick="proc1();">클릭하세요</button>
+		</div>
+		
+		
+		<div>
+			<h1>가위바위보 게임</h1>
+			<p>
+				가위 바위 보 게임
+			</p>
+			<button onclick="proc2();">게임 시작</button>
+		</div>
+		<div>
+		
+		
+			<h1>로또 실행</h1>
+			<p>
+				로또 추첨 실행
+			</p>
+			<button onclick="proc3();">로또 추첨 시작</button>
+		</div>
+	</body>
+</html>

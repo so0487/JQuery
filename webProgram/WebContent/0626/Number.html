@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Number</title>
+		<script>
+			/*
+				Number객체는 수치형 값을 감싸서 객체로 만들어주는 wrapper객체
+				
+				속성
+					MAXVALUE
+					MINVALUE
+					NaN
+					
+				메서드
+					toExponential()
+					toFixed()
+					toPrecision()
+					toString()
+			*/
+			
+			function numFunc1(){
+				var num1 = 11;
+				var num2 = new Number(11);
+				
+				
+				
+				document.write(typeof num1+"<br>");
+				document.write(typeof num2+"<br>");
+				
+				
+				document.write(num1+","+num2);
+			}
+			//numFunc1();
+			
+			
+			
+			function numFunc2(){
+				var num1 = 123;
+				var num2 = 123.456;
+				
+				
+				
+				document.write("toString : "+num1.toString()+"<br>");
+				//지수형으로 반환, 인수는 소수점 이하 갯수
+				document.write("toExponential : "+num1.toExponential(2)+"<br>");
+				//유효숫자 수를 지정
+				document.write("toPrecision : "+num1.toPrecision(2)+"<br>");
+				//고정소수점 방식으로 반환, 인수는 소수점 이하 개수
+				document.write("toFixed : "+num1.toFixed(2));
+				
+				
+				
+				
+				document.write("<hr>");
+				
+				
+				
+				
+				document.write("toString : "+num2.toString()+"<br>");
+				//지수형으로 반환, 인수는 소수점 이하 갯수
+				document.write("toExponential : "+num2.toExponential(4)+"<br>");
+				//유효숫자 수를 지정
+				document.write("toPrecision : "+num2.toPrecision(4)+"<br>");
+				//고정소수점 방식으로 반환, 인수는 소수점 이하 개수
+				document.write("toFixed : "+num2.toFixed(2));
+			}
+			//numFunc2();
+			
+			
+			function numFunc3(){
+				/*
+					valueOf()메서드는 Number객체가 감싼 원시 값을 반환한다.
+					NaN	:	Not a Number(숫자형이 아닙니다.)
+				*/
+				
+				
+				var x = 123;
+				var y = new Number(123);
+				var z = new Number("aaa");
+				
+				document.write(typeof x+"<br>");
+				document.write(typeof y+"<br>");
+				document.write(typeof z+"<br>");
+				
+				document.write("<hr>");
+				
+				document.write(x.valueOf()+"<br>");
+				document.write(y.valueOf()+"<br>");
+				document.write(z.valueOf()+"<br>");
+			}	
+			numFunc3();
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

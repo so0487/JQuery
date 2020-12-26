@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CssBasic</title>
+		<!-- 
+		CSS 우선순위 적용
+		
+		1순위 : 인라인 스타일 시트(태그내에 존재)
+		2순위 : 내부 스타일 시트(head태그 안에 존재)
+		3순위 : 외부 스타일 시트(외부 CSS 파일 안에 존재)
+		
+		
+		 -->
+		<link href="https://fonts.googleapis.com/css2?family=Dokdo&family=Gaegu:wght@300;400;700&display=swap" rel="stylesheet">
+		<link href="cssBasic.css" rel="stylesheet">
+		<link href="mycss.css" rel="stylesheet">
+		
+		
+		<style>
+		/*내부 스타일 시트*/
+			#box{
+			background-color : yellow;
+			font-family: 'Gaegu', cursive;
+			}
+			/*
+				내부 스타일 시트에서는 id, class 둘 다 동일하게 설정하면 
+				id에 있는 스타일 태그가 우선순위가 높다.
+			*/
+			#box2{
+			color: yellow;
+			font-family: 'Dokdo', cursive;
+			
+			}
+			
+			.colorPink{
+			
+				color: pink;
+			}
+			
+			h1,h2,h3{
+				color: blue;
+				background-color: pink;
+			}
+
+			
+		</style>
+	</head>
+	<body>
+		<!-- 인라인 스타일 시트 -->
+		<div id="box" style="background-color: red"> div태그 입니다.</div>
+		
+		
+		<!-- 
+			mycss.css라는 외부 스타일 시트 파일을 작성하고 그 안에 id가 box2인 div를 빨간색 배경으로 설정
+		
+			head태그 안에 내부 스타일 시트를 작성하고 id가 box2인 div를 글자색상을 노란색으로 설정
+			
+			인라인 태그 안에 스타일 시트 작성
+			배경색을 검은색으로 설정
+			
+			html id가 box2인 div 태그를 작성
+			
+			 -->
+			 
+			 
+			 <div id="box2" class="colorPink" style="background-color: black;">div2 입니다.</div>
+			 
+			 
+			 <div class="colorPink">div태그 입니다. class설정할꺼에요</div>
+			 
+			 
+			 
+			 
+			 
+			 <h1>heading1</h1>
+			 <h2>heading2</h2>
+			 <h3>heading3</h3>
+	
+	</body>
+</html>

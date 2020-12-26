@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>회원가입</title>
+		<link rel="stylesheet" href="../css/MemberJoin.css">
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		 
+		  
+	 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script>
+			$(function(){
+				$("#btnid").click(function(){
+					$.ajax({
+						url:"/FinalProject/IDCheckServlet",
+						type:"post",
+						data:"id="+$("#id").val(),
+						dataType:"json",
+						success:function(result){
+							$("#idCheck").html(result.id).css("color","red");
+						},
+						error:function(xhr){
+							alert("에러 "+xhr.status);
+						}
+					});
+				});
+				
+				
+				$("#btnjoin").click(function(){
+					$.ajax({
+						url:"/FinalProject/MemberJoinServlet",
+						type:"post",
+						data:$("#form").serializeArray(),
+						dataType:"json",
+						
+						
+						success:function(res){
+							alert(res.result);
+							
+						},
+						
+						error:function(xhr){
+							alert("상태 : "+xhr.status)
+						}
+						
+					});
+					
+					return false;
+					
+				});
+	
+				
+			});
+		</script>
+	</head>
+	<body>
+		<div id="headLogo">
+			<img alt="메인로고" src="" width="240" height="44" align="center">
+		</div><!-- headLogo -->
+		
+		
+		<div id="div_form">
+			<form id="form"><!-- form시작 -->
+			
+				<div id="div_id">
+					<p>아이디</p>
+					<input type="text" id="id" name="mem_id"><br>
+					<input type="button" id="btnid" name="btnIdCheck" value="아이디 중복 체크" class="btn">
+					<span id="idCheck">아이디 중복 체크 결과 표시 화면</span>
+				</div><!-- div_id -->
+				
+				
+				<div id="div_pw">
+					<p>패스워드</p>
+					<input type="password" id="pw" name="mem_pass">
+					<span>패스워드 입력양식 오류</span>
+				</div><!-- div_pw -->
+				
+				
+				<div id="div_pwCheck">
+					<p>패스워드 재입력</p>
+					<input type="password" id="pwCheck" name="pwCheck">
+					<span>오류메시지표시 영역(패스워드 불일치)</span>
+				</div><!-- div_pwCheck -->
+				
+				
+				<div id="div_name">
+					<p>이름</p>
+					<input type="text" id="named" name="mem_name">
+				</div><!-- div_name -->
+				
+				
+				<div id="div_birth">
+					<p>생년월일</p>
+					<input type="text" id="birth_year">년
+					<select id="birth_month">
+						<option>
+						<option value="01">01</option>
+						<option value="02">02</option>
+						<option value="03">03</option>
+						<option value="04">04</option>
+						<option value="05">05</option>
+						<option value="06">06</option>
+						<option value="07">07</option>
+						<option value="08">08</option>
+						<option value="09">09</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+					</select> 월
+					
+					
+					<select name="bir_day">
+						<option value="01">01</option>
+						<option value="02">02</option>
+						<option value="03">03</option>
+						<option value="04">04</option>
+						<option value="05">05</option>
+						<option value="06">06</option>
+						<option value="07">07</option>
+						<option value="08">08</option>
+						<option value="09">09</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+						<option value="15">15</option>
+						<option value="16">16</option>
+						<option value="17">17</option>
+						<option value="18">18</option>
+						<option value="19">19</option>
+						<option value="20">20</option>
+						<option value="21">21</option>
+						<option value="22">22</option>
+						<option value="23">23</option>
+						<option value="24">24</option>
+						<option value="25">25</option>
+						<option value="26">26</option>
+						<option value="27">27</option>
+						<option value="28">28</option>
+						<option value="29">29</option>
+						<option value="30">30</option>
+						<option value="31">31</option>
+					
+					</select>일
+				</div><!-- div_birth -->
+				
+				
+				<div id="div_gender">
+					<p>성별</p>
+					<select id="select_gender" name="mem_gender">
+						<option value="gender">성별</option>
+						<option value="male" >남자</option>
+						<option value="female">여자</option>
+					</select><!-- select_gender -->
+				</div><!-- div_gender -->
+				
+				
+				<div id="div_email">
+					<p>이메일</p>
+					<input type="text" id="email" name="mem_mail">
+					@
+					<select id="select_email">
+						<option value="naver">naver.com</option>
+						<option value="gmail">gmail.com</option>
+						<option value="daum">daum.net</option>
+					</select>
+					
+				</div><
+				!-- div_email -->
+				
+				
+				<div id="div_phoneNum">
+					<p>전화번호</p>
+					<input type="text" id="tel" name="mem_tel">
+				</div><!-- div_phoneNum -->
+				
+				
+				<div id="div_btn">
+					<p></p>
+					<input type="submit" id="btnjoin" value="가입하기" class="btn">
+				</div><!-- div_btn -->
+			
+			</form><!-- 폼 양식 종료 -->
+			
+		</div><!--div_form-->
+	</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>effect</title>
+		<script src="../js/jquery-3.5.1.min.js"></script> 
+		<script>
+			/*
+			$(function(){
+				$("img").css("display","none");
+				
+				$("#show").click(function(){
+					$("img").show(1000,"linear",function(){
+						alert("사자가 나타났다.");
+					});
+					
+				});
+				
+				$("#hide").click(function() {
+					$("img").hide();
+				});
+				
+				
+				$("#sDown").click(function(){
+					$("img").slideDown(3000);
+				});
+				
+				
+				
+				$("#sUp").click(function(){
+					$("img").slideUp();
+				});
+				
+				$("#fIn").click(function(){
+					$("img").fadeIn(1000);
+				})
+				
+				$("#fOut").click(function(){
+					$("img").fadeOut(1000);
+				})
+				
+				
+			});
+		
+		
+			*/
+		
+			/*
+				이미지 3개를 다운받아서 진행
+				eq를 적용
+				
+				첫번째 이미지)
+				이미지를 클릭하였을 경우 slideUp(없애는 거)이벤트를 적용
+				
+				두번째 이미지)
+				이미지를 클릭하였을 경우 fadeOut 이벤트 적용
+				
+				세번째 이미지)
+				이미지를 클릭하였을 경우
+				첫번째 이미지에 slidedown, 두번째 이미지에 fadeIn이벤트를 적용
+			*/
+			
+				$(function(){
+					$("img").eq(0).click(function(){
+						$(this).slideUp();
+					});
+					
+					
+					$("img").eq(1).click(function(){
+						$(this).fadeOut();
+					});
+					$("img").eq(2).click(function(){
+						$("img").eq(0).slideDown();
+						$("img").eq(1).fadeIn();
+					});
+					
+				});
+		</script>
+	</head>
+	<body>
+		<div>
+			<!-- 
+			<button id="show">show</button>
+			<button id="hide">hide</button>
+			<button id="sDown">slideDown</button>
+			<button id="sUp">sliedUp</button>
+			<button id="fIn">fadeIn</button>
+			<button id="fOut">fadeOut</button>
+		
+			
+			 -->
+		
+		</div>
+		
+<!-- 		<img alt="사자이미지" src="../img/lion.jpg"> -->
+		<img alt="옷 이미지" src="../img/clothing2.jpg">
+		<img alt="커피 이미지" src="../img/coffee.jpg">
+		<img alt="컴퓨 이미지" src="../img/computer2.jpg">
+		
+	</body>
+</html>

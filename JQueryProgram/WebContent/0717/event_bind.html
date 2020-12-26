@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>event_bind</title>
+		<script src="../js/jquery-3.5.1.min.js"></script> 
+		<script>
+
+			$(function(){
+				//$("button").click();
+				
+				$("button").dblclick();
+				
+				var action = "dblclick";
+				/*주의: 텍스트로 적용이 되므로 오타가 발생함을 주의한다!!!!!*/
+				$("button").bind(action, function(){
+					alert("클릭했습니다.")
+				});
+				
+				
+				$("#box").bind("click", function(){
+					/* console.log("클릭이 되었습니다."); */
+					var imgtag= $("<img/>",{
+					 	"src":"../img/lion.jpg",
+					 	"width":"100px",
+					 	"height":"100px"
+								 });
+					
+					$(imgtag).appendTo("body");
+				});
+				
+				/*
+				어떠한 이벤트가 bind되어있을지라도 unbind() 메서드에 의해
+				모두 해제 가능하다
+				
+				*/
+				$("#box").unbind();
+				
+			});		
+		
+		</script>
+	</head>
+	<body>
+		<button>버튼을 클릭하세요.</button>
+		<div id="box">
+			여기를 클릭해주세요
+		</div>
+	</body>
+</html>

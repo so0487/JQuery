@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JQueryEvent2</title>
+		<script src="../js/jquery-3.5.1.min.js"></script> 
+		<script>
+			$(function(){
+				var count=0;
+				$("textarea").keyup(function(){
+					//alert(1);
+					
+					$("#result").html($(this).val().length);
+					
+					
+					//글자수가 40자 초과되었을 경우 textarea내에 작성이 되지 않도록 수정
+					if($(this).val().length>=40){
+						
+						//$(this).attr("readonly", "readonly");
+						$(this).prop("disabled", true);
+					}
+					
+				});
+			});
+		</script>
+	</head>
+	<body>
+		하고 싶은 말을 작성하세요(40자 이내)<br>
+		<textarea rows="10" cols="50"></textarea>
+		<div id="result"></div>
+	</body>
+</html>

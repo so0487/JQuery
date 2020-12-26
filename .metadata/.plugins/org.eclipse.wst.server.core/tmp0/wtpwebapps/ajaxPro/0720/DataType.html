@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>DataType</title>
+		<script src="../js/jquery-3.5.1.min.js"></script>
+		<script>
+			$(function(){
+				$("#txt").click(function(){
+					$.ajax({
+						url:"textData.jsp",
+						dataType:"text",
+						success:function(result){
+							$("#result").html(result);
+						},
+						error:function(xhr, status, error){
+							alert("error!");
+						}
+					});
+				});
+				
+				$("#jsonArr").click(function(){
+					$.ajax({
+						url:"jsonArr.jsp",
+						dataType:"json",
+						success:function(resultArr){
+							var code = "";
+							$.each(resultArr, function(i){
+								code +=resultArr[i]+"<br>"
+							});
+								$("#result").html(code);
+						},
+						error:function(){
+							alert("error!");
+						}
+					});
+				});
+				
+				$("#jsonObj").click(function(){
+					$.ajax({
+						url :"jsonObj.jsp", 
+						dataType:"json",
+						success:function(resultObj){
+							var code = "";
+							
+							code += resultObj.name+"<br>";
+							code += resultObj.addr+"<br>";
+							code += resultObj.tel+"<br>";
+							
+							$("#result").html(code);
+						},
+						error:function(){
+							alert("error!");
+						}
+						
+					});
+					
+				});
+				
+				$("#jsonMix").click(function(){
+					$.ajax({
+						url:"jsonMix.jsp",
+						dataType:"json",
+						success:function(resultMix){
+							var code = "";
+							$.each(resultMix, function(i){
+								code += resultMix[i].name+"<br>";
+								code += resultMix[i].addr+"<br>";
+								code += resultMix[i].tel+"<br>";
+							});
+							$("#result").html(code);
+							
+						},
+						error:function(){
+							alert("error!");
+						}
+						
+					});
+					
+				});
+				
+				
+				
+			});
+		</script>
+	</head>
+	<body>
+		<button id="txt">TextData</button>
+		<button id="jsonArr">jsonArr</button>
+		<button id="jsonObj">jsonObj</button>
+		<button id="jsonMix">jsonMix</button>
+		
+		
+		<hr>
+		<div id="result"></div>
+	</body>
+</html>

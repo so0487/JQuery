@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>operation</title>
+		<script>
+			var s1 = "welcome to";
+			var s2 = "javascript";
+			
+			console.log(s1+s2);
+			
+			
+			
+			
+			var x = 1+1;
+			var y = "car"+1;
+			
+			console.log(x);
+			console.log(typeof x);		//number
+			console.log(y);	
+			console.log(typeof y);		//string(문자형+숫자형)
+			
+			
+/* 			
+			var age = prompt("나이를 입력하세요");
+			
+			//string형은 숫자형이랑 비교시에 숫자형으로 변환됨
+			if(age>=18){
+				alert("입장이 가능합니다.");
+			}
+			
+			 */
+			
+			var ck1 = 10;
+			var ck2 = 20;
+			var ck3 = "10";
+			var ck4 = "20";
+			var ck5 = "10";
+			
+/* 			
+			if(ck1==ck3){
+				document.write("ck1==ck3");
+			}if(ck2==ck4){
+				document.write("ck2==ck4");
+			}
+		 */	
+			
+		 
+		 /*===는 값과 형식 모두 비교*/
+			if(ck1===ck3){
+				document.write("ck1==ck3");
+			}if(ck2===ck4){
+				document.write("ck2==ck4");
+				
+				
+		 /*값과 내용이 같으면 참(true)*/
+			}if(ck3==ck5){
+				document.write("ck3==ck5");
+			}
+			
+			if(ck1 != ck3){
+				document.write("ck1 != ck3");
+			}
+			
+	
+			if(ck1 !== ck3){
+				document.write("ck1 !== ck3");//형식과 값 중 하나라도 일치하지 않음---------->형식과 값이 틀리기 때문에(문자형"10"과 숫자형10) 출력이 된다.
+			}
+			
+			
+			
+			
+			
+			
+			var num1 = 10;
+			var num2 = 20;
+			
+			if(num1>num2){
+				alert("num1이 num2보다 크다.");
+			}else{
+				alert("num1이 num2보다 작거나 같다.");
+			}
+			
+			
+			/*삼항연산자(조건연산자)*/
+			var str = (num1>num2)?"num1이 num2보다 크다. ":"num1이 num2보다 작거나 같다.";
+			
+			alert(str);
+					
+			
+			
+			
+			
+			
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

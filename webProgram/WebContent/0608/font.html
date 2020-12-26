@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>font</title>
+		<style>
+		#p1{
+		font-size: 30pt;
+		
+		font-style: italic;
+		
+		}
+		
+		#p3{
+		font-size: 4.0em;
+		font-weight: bold;
+		}
+		
+		#p4{
+		font:italic 50pt arial, sans-serif; 
+		}
+		
+		.colorBlue{
+		color: blue;
+		
+		}
+		/*
+			마진(margin) : 바깥쪽 여백
+			패딩(padding): 안쪽 여백
+		*/
+		
+		*{margin: 0; padding: 0;}/*모든 바깥쪽, 안쪽 여백을 없애준다.*/
+		
+		body{
+			background-color: #36fcff;
+		}
+		
+		</style>
+	</head>
+	<body>
+		<p id="p1">문단1</p>
+		<p class="colorBlue">문단2</p>
+		<p id="p3" class="colorBlue">문단3</p>
+		<p id="p4">문단4</p>
+	</body>
+</html>

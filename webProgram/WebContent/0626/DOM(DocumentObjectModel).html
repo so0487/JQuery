@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>DOM(DocumentObjectModel)</title>
+		<!-- 
+			-	DOM은 W3C의 표준이다.
+			-	DOM은 문서를 엑세스 하기위한 표준을 정의한다.
+			-	W3C 문서 객체 모델(DOM)은 프로그램 및 스크립트를 동적으로 엑세스하여
+				문서의 콘텐츠, 구조 및 스타일을 갱신할 수 있도록 플랫폼 및 언어 중립 인터페이스이다.
+								
+			-	DOM은 HTML문서의 계층적인 구조를 트리형태로 표현
+		 -->
+		 
+		 <script>
+		 	function proc() {
+		 		/*
+		 		
+		 			getElementsByTagName, getElementsByName은
+		 			form안에 있는 모든 값을 배열화 시켜서 가져온다.
+		 			그러므로 배열 인덱스번호를 반드시 사용하여 값을 가져와야 한다.
+		 			
+		 		*/
+				
+		 		//var val = document.getElementsByTagName("input")[0].value;
+				var val = document.getElementsByTagName("input").value;
+				
+				console.log(val);
+				
+			}
+		 </script>
+	</head>
+	<body>	
+		<form name="myform">
+			<input type="text" name="txt1"><br>
+<!-- 			<input type="button" value="제출" onclick="proc();"> -->
+			<input type="button" value="제출" onclick="getText();">
+			<hr>
+			
+			<img src="../img/icecream.jpg" alt="" name="myimg">
+			<img src="../img/play.png" alt="">
+		</form>
+		<script>
+			function getImg(){
+				
+				//이름을 지정한 경우 : name 속성을 바로 써서 값을 가져올 수 있다.
+				alert(document.myimg.src);
+			}
+			//getImg();
+			
+			
+			
+			
+			
+			function getText(){
+				//form, input의 name속성을 지정한 경우
+				alert(document.myform.txt1.value);
+			}
+			//getText();
+			
+			
+			
+			function getImgs(){
+				//이름 속성이 설정되어 있지 않은 경우
+				//images메서드를 이용하여 배열 형태로 찾을 수 있음
+				alert(document.images[0].src);
+				alert(document.images[1].src);
+			}
+			getImgs();
+		</script>
+	</body>
+</html>

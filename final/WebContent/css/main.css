@@ -1,0 +1,44 @@
+@CHARSET "UTF-8";
+
+*{margin:0;padding:0;box-sizing:border-box;}
+a{text-decoration:none;}
+ul, li{list-style:none;}
+.box{width:100%;}
+#topBox{height:34px;background:#555555;}
+#naviBox{height:75px;}
+#contBox{height:335px;background-image:url("../img/background.jpg");background-position:0 -560px;}
+#footerBox{height:121px;}
+
+#top{width:1200px;height:34px;color:white;margin:0 auto;line-height:34px;}
+#top a{color:white;float:right;padding:0 10px;font-weight:bold;}
+#nav{width:1200px;height:75px;margin:0 auto;line-height:75px;}
+#nav>ul{overflow:hidden;}
+#nav img{float:left;margin-top:15px;}
+#nav>ul>li{float:left;text-align:center;}
+#nav>ul>li>a{margin-left:20px;width:120px;height:70px;font-size:1.4em;font-weight:bold;color:black;display:inline-block;}
+.submenu{display:none; position:absolute; z-index:9; top:100px;}
+.sub_back{position:absolute;display:none;z-index:8;top:110px;width:100%;height:300px;background:#f1f1f1;}
+.submenu>li{display:inline;padding:0 10px;margin:20px 10px 0 10px;width:200px;height:50px;line-height:50px;background-color:white;border:1px solid #d7d9db;float:left;}
+.submenu>li>a{color:black;}
+#ifrBox, #ifr{height:650px;}
+#cont{width:1200px;height:335px;margin:0 auto;position:relative;}
+.contText{font-size:3.2em;position:absolute;left:20px;top:80px;}
+#searchBox{width:586px;height:65px;position:absolute;left:20px;bottom:-30px;background:white;border:2px solid #1b4a96;display:inline;}
+#searchBox strong{padding:0 20px;line-height:65px;font-size:1.4em;}
+#search{width:352px;border:none;}
+#searchBtn{width:60px;height:60px;border:none;float:right;}
+#sliderBox{width:400px;height:280px;position:absolute;right:0;bottom:-50px;}
+.click{width:230px;height:150px;position:absolute;bottom:-220px;font-size:1.5em;text-align:center;line-height:163px;}
+.click a{color:white;}
+#c1{left:20px;background-color:#19aad9;}
+#c2{left:340px;background-color:#17419a;}
+#c3{right:315px;background-color:#5193f6;}
+#c4{right:0;background-color:#5973e1;}
+#footer{width:1200px;height:121px;margin:0 auto;font-weight:bold;}
+#footer p{margin:20px;}
+#popUp{width:400px;height:400px;position:fixed;z-index:10;left:0;top:0;background-color:white;border:1px solid grey;}
+#popUp p{background:#276ebf;color:white;padding:10px;border:1px solid grey;font-size:1.5em;font-weight:bold;position:abolute;top:0;}
+#popUp img{width:380px;margin-top:5px;margin-left:9px;}
+#noMoreBtn, #closeBtn{width:200px;height:40px;border:1px solid grey;background:white;position:absolute;bottom:0;}
+#noMoreBtn{left:0;}
+#closeBtn{right:0;}

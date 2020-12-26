@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>floating_img</title>
+		<script src="../js/jquery-3.5.1.min.js"></script>
+		<script>
+			$(function(){
+				$(document).on("mouseover", ".imgTh", function(event){
+					
+					$("body").append("<div id='thumbnail'>"
+							+ "<img src='"+$(this).attr("src") 
+							+ "'></div>");
+					
+					$("#thumbnail img").css("width", "600px")
+										.css("height", "600px");
+					
+					
+					$("#thumbnail").css("top", event.pageY+"px")
+									.css("left", event.pageX +"px")
+									.fadeIn(1000);
+					
+				});
+				
+				$(document).on("mousemove", ".imgTh", function(event){
+					$("#thumbnail").css("top", event.pageY+"px")
+									.css("left", event.pageX +"px");
+				});
+	
+				
+				$(document).on("mouseout", ".imgTh", function(){
+					$("#thumbnail").remove();
+				});
+				
+				
+				/*
+				
+					마우스 오버시 보이는 이미지가 큰 이미지로 보여질 수 있도록 수정  width 800px
+					이미지에서 마우스 아웃시(이미지를 벗어났을 경우) 큰 이미지는 보이지 않도록 수정
+				*/
+				
+			});
+		
+		</script>
+		<style>
+			img{
+				width:100px;
+				height:100px;
+			}
+			#thumbnail{
+				position:absolute;
+				background-color:yellow;
+				display:none;
+				z-index:9999;
+				width:600px;
+			}
+		</style>
+	</head>
+	<body>
+		<img src="../img/summer.jpg" class="imgTh">
+	</body>
+</html>
+
+
+
+
+
+

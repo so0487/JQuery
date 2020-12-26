@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>home</title>
+		<script src="../js/jquery-3.5.1.min.js"></script>
+		<script src="../js/jquery.bxslider.js"></script>
+		<link rel="stylesheet" href="../css/main.css?ver=1.2">
+		<link rel="stylesheet" href="../css/jquery.bxslider.css?ver=1.0">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script>
+			$(function(){
+			  $('.slider').bxSlider({
+			    mode: 'fade',
+			    captions: true,
+			    auto: true,
+			    pause: 2000
+			  });
+			});
+		</script>
+	</head>
+	<body>
+		<div id="contBox">
+			<div id="cont">
+				<span class="contText"><strong>국민의 작은 소리도</strong><br>크게 듣겠습니다.</span>
+				<div id="searchBox">
+					<strong>민원사례검색</strong>
+					<input id="search" type="text" placeholder="민원 사례와 처리결과 원문을 검색하세요.">
+					<input id="searchBtn" type="button">
+					<!-- 돋보기이미지삽입해야함 -->
+				</div>
+				<div id="sliderBox">
+					<div class="slider">
+						<div><img src="../img/slider1.jpg"></div>
+						<div><img src="../img/slider2.jpg"></div>
+						<div><img src="../img/slider3.jpg"></div>
+						<div><img src="../img/slider4.jpg"></div>
+						<div><img src="../img/slider5.jpg"></div>
+						<div><img src="../img/slider6.jpg"></div>
+					</div>
+				</div>
+				<div id="c1" class="click"><a href="#">민원신청</a></div>
+				<div id="c2" class="click"><a href="#">민원상담신청</a></div>
+				<div id="c3" class="click"><a href="#">제안신청</a></div>
+				<div id="c4" class="click"><a href="#">결과조회</a></div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>naverTest</title>
+		<style>
+		
+		*{margin: 0px; padding: 0px;}
+		
+		/*tip영역*/
+		#tip{
+			clear: both;
+			width: 100%; height: 100px;
+			background-color: #00cbae;
+		}
+		
+		#tip_cont{
+			width: 60%; height: 100px;
+			margin:0 auto;
+			position: relative;
+		}
+		
+		#tiptop{
+			width: 60%; height: 60px;
+		
+		}
+		#whaleImg{
+			width: 180px; height: 60px;
+			line-height: 80px;
+			float: left;
+		}
+		#naver_tip_img{
+			width:150px; height:60px;
+			float: left;
+		}
+		#whale_txt{
+			width: 470px; height:60px;
+			color: white;
+			float: left;
+			line-height: 70px;
+			font-size: 10pt;
+		}
+		#whale_down_btn{
+			line-height: 70px;
+			float: left;
+		}
+		#whale_close_btn{
+			line-height: 70px;
+			float: right;
+		}
+		#tip_bottom{
+			width: 100%; height: 40px;
+			margin: 0 auto;
+			background-color: white;
+			position: absolute;
+			top: 60px;
+		}
+		
+		#tip_bottom_cont{
+			line-height:45px;
+			clear: both;
+			width:60%;	height:40px;
+			margin: 0 auto;
+		}
+		#link_set_txt{
+			
+			position: absolute;
+			left:1130px;
+			font-size: 12px;
+		}
+		
+		
+		#link_set{
+			background-image: url('../img/naver/sp_main.44265f.png');
+			width:40px; height: 40px;
+			background-position: -788px -451px;
+			position: absolute;
+			left: 1265px;
+		}
+		#j_naver_icon{
+			background-image: url('../img/naver/sp_main.44265f.png');
+			width: 125px; height: 30px;
+			background-position: -697px -520px;
+			position: absolute;
+			left: 1320px;
+			top: 10px;
+		}
+		
+		#happybean_icon{
+			background-image: url('../img/naver/sp_main.44265f.png');
+			width: 73px; height: 33px;
+			background-position: -505px -640px;				
+			position: absolute;
+			left: 1450px;
+			top: 5px;
+				
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/*header영역*/
+		#header{
+			width: 100%; height: 160px;
+		}
+		#header_cont{
+			width: 60%; height: 160px;
+			margin: 0 auto;
+			position: relative;
+		}
+		#naver_logo{
+			width: 100%; height: 160px;		
+			position: absolute;
+			left: 0px;	
+			top: 50px;
+		}
+		
+		#searchArea{
+			width: 584px; height: 160px;
+			position: absolute;
+			left: 300px;
+		
+		}
+		#searchBar{
+			position: absolute;
+			top: 50px;
+		}
+		
+		#keybord_icon{
+			background-image: url('../img/naver/sp_main.44265f.png');
+			width: 40px; height: 33px;
+			background-position: -130px -810px;
+			position:absolute;
+			top: 20px;
+			left: 470px;
+		}
+		#btn_arw{
+			background-image: url('../img/naver/sp_main.44265f.png');
+			width: 22px; height: 33px;
+			background-position: -860px -785px;
+			position:absolute;
+			top: 20px;
+			left: 510px;
+			
+		}
+		
+		#searchBtn{
+			position: absolute;
+			top:0px;
+			right: 0px;
+		}
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/*nav영역*/
+		#nav{
+			width: 100%; height: 60px;
+		}
+		
+		#nav_cont{
+			width: 60%; height: 60px;
+			margin: 0 auto;
+		}
+		
+		#menuBar{
+			width: 100%;
+			height: 60px;
+			letter-spacing: 3px;
+			margin:0 auto;
+			position:relative;
+			font-weight: bold;
+			top: 15px;
+			left: 0px;
+		}
+		
+		
+	
+		ul{
+			list-style: none;
+		}
+		
+		ul li{
+		
+			display: inline;
+
+		}
+		
+		ul li a{
+			text-decoration: none; 
+		}
+		#keyword{
+			width:175px; height:30px;
+			position: absolute;
+			background-color: #D5D5D5;
+			right: 0px;
+			top: 0px;
+		}
+		
+		
+		
+		
+		
+		
+		
+		/*content영역*/
+		#content{
+			width: 100%; height: 1000px;
+			background-color: #FFD9EC;
+		}
+		
+		
+		
+		#con_left{
+			width: 60%; height: 1000px;
+			float: left;
+			position: relative;
+		}
+		
+		#bannerCont{
+			width: 66.6%; height: 135px;
+			float: right;
+		}
+		#newsCont{
+			width: 66.6%; height: 50px;
+			background-color: #dae1e6;
+			position: absolute;
+			right: 0px;
+			top:136px;
+		}
+		
+		
+		
+		
+		
+		
+		#con_right{
+			width: 40%; height: 1000px;
+			float: left;
+			position: relative;
+		}
+		
+		#loginArea{
+			width: 50%; height: 135px;
+			background-color: #dae1e6;
+		}
+		#login_msg{
+			color: grey;
+			font-size: 15px;
+   			line-height: 60px;
+		}
+		#cardInfoArea{
+			width: 50%; height: 50px;
+			position: relative;
+			background-color: white;
+			right: 0px;
+			top: 0px;
+			border: 1px solid black;
+			
+			
+		}
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/*footer영역*/
+		#footer{
+			clear: both;
+			width: 100%; height: 430px;
+			background-color: navy;
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/*---------------------------------------------------------------------------------------------------*/
+		.whale_down_btn{
+			color: #00cbae;
+			background-color: #fff1c0;
+			font-size: 10pt;
+			outline: none;
+		}
+		.whale_close_btn{
+			font-size: 10pt;
+			color: white;
+			background-color: #00cbae;
+			outline: none;
+		}
+		.naverTV{
+			color: #03c75a;
+		}
+		.loginBtn{
+			width:315px; height:50px;
+			background-color: #19ce60;
+			color: white;
+			font-weight: bold;
+			position: absolute;
+			right:415px;
+		}
+		</style>
+		
+		
+		
+	</head>
+	<body>
+		<div id=tip>
+			<div id="tip_top">
+				<div id="tip_cont">
+
+				<div id=whaleImg>
+					<a href="https://whale.naver.com/ko/?=main"><img alt="whale이미지"
+						src="../img/naver/naver-whale_logo.jpg" width="110px"
+						height="30px"></a>
+				</div>
+				<!-- whaleImg -->
+				<div id="naver_tip_img"><a href="https://whale.naver.com/ko/?=main"><img alt="tip상단 이미지" src="../img/naver/naver_tip_img.png" width="150px" height="60px"></a>	</div><!-- naver_tip_img -->
+				<div id="whale_txt"><a>인터넷의 새로운 시작! <a href="https://whale.naver.com/ko/?=main"><span style="text-decoration: underline; color: white">네이버 웨일</a></span></a>로 차원이 다른 웹서핑을 경험해보세요!
+				</div><!-- whale_txt -->
+				<div id="whale_down_btn"><input type="button" value="다운로드" class="whale_down_btn">	</div><!-- whale_down_btn -->
+				<div id="whale_close_btn"><input type="button" value="3일 동안 보지 않기 X" class="whale_close_btn"></div><!-- whale_close_btn -->
+			</div><!-- tip_cont -->
+			</div><!-- tip_top -->
+				<div id=tip_bottom>
+					<div id="tip_bottom_cont">
+						<div id="link_set_txt">네이버를 시작페이지로</div><!-- link_set_txt -->
+						<div id="link_set"></div><!-- link_set -->
+						<div id="j_naver_icon"></div><!-- j_naver_icon -->
+						<div id="happybean_icon"></div><!-- happybean_icon -->
+					</div><!-- tip_bottom_cont -->
+				</div><!-- tip_bottom -->
+		</div><!-- tip -->
+		
+		
+		
+		
+		
+		
+		
+		<div id=header>
+			<div id="header_cont">
+				<div id="naver_logo"><a href="https://www.naver.com/"><img alt="메인로고" src="../img/naver/naver.png" width="222px" height="52px"></a></div><!-- naver_logo -->
+				<div id= "searchArea">
+					<div id="searchBar"><input type="text"style="width: 585px; height: 56px; border: 1px solid green;">
+						<div id="keybord_icon"></div><!-- keybord_icon -->
+						<div id="btn_arw"></div><!-- btn_arw -->
+						<div id="searchBtn"><input type="image" src="../img/naver/searchBtn.PNG" width="56px;" height="56px;"></div><!-- searchBtn -->
+					</div><!-- searchBar -->
+				</div><!-- searchArea -->
+			</div><!-- header_cont -->
+		</div><!-- header -->
+		
+		
+		
+		
+		
+		
+		<div id=nav>
+			<div id="nav_cont">
+				<div id= menuBar>
+					<ul>
+						<li><a href="" style="color: #03c75a"><img alt="메일 이미지" src="../img/naver/mail.png"width="21px;" height="21px;"></a></li>
+						<li><a href="" style="color: #03c75a">메일</a></li>
+						<li><a href=""style="color: #03c75a">카페</a></li>
+						<li><a href=""style="color: #03c75a">블로그</a></li>
+						<li><a href=""style="color: #03c75a">지식iN</a></li>
+						<li><a href=""style="color: #03c75a">쇼핑</a></li>
+						<li><a href=""style="color: #03c75a">Pay</a></li>
+						<li><a href=""style="color: #03c75a"><img class="naverTV"alt="TV 이미지" src="../img/naver/naverTV.png"width="12px;" height="14px;"></a></li>
+						<li><a href=""style="color: #03c75a">TV</a></li>
+						<li><a href="">사전</a></li>
+						<li><a href="">뉴스</a></li>
+						<li><a href="">증권</a></li>
+						<li><a href="">부동산</a></li>
+						<li><a href="">지도</a></li>
+						<li><a href="">영화</a></li>
+						<li><a href="">뮤직</a></li>
+						<li><a href="">책</a></li>
+						<li><a href="">웹툰</a></li>
+						<li><a href="">더보기</a></li>
+					</ul>
+					<div id="keyword">실시간 상승검색어</div><!-- keyword -->
+				</div><!-- menuBar -->
+			</div><!-- nav_cont -->
+		</div><!-- nav -->
+		
+		
+		
+		
+		
+		<div id=content>
+			<div id=con_left>
+				<div id=bannerCont>
+					<div id=bannerImg><img alt="배너이미지" src="../img/naver/banner.jpg" width="100%"height="135px"></div>
+				</div><!-- bannerCont -->
+				<div id="newsCont"><p>뉴스</p></div><!-- newsCont -->
+			</div><!-- con_left -->
+			
+			
+			<div id=con_right>
+				<div id="loginArea">
+					<div id="login_msg">네이버를 더 안전하고 편리하게 이용하세요 </div><!-- login_msg -->
+					<div id="loginBtn"><input type="button" value="NAVER 로그인" class="loginBtn"></div><!-- loginBtn -->
+				</div><!-- loginArea -->
+				
+				<div id="cardInfoArea"><a>카드뉴스</a></div><!-- cardInfoArea -->
+			
+			</div><!-- con_right -->
+		</div><!-- content -->
+		
+		
+		
+		
+		
+		
+		
+		<div id=footer></div><!-- footer -->
+	</body>
+</html>

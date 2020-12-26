@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>checked</title>
+		<script src="../js/jquery-3.5.1.js"></script>
+		<script>
+			$(function(){
+				//$("input[type=button]").click(function(){
+				$(":button").click(function(){
+					var result = "";
+					//$("input[type=checkbox]:checked").each(function(idx){
+					$(":checkbox:checked").each(function(idx){
+						//result += (idx+1)+"번째 : "+$(this).val()+"\n";
+						//result += "<br>"+(idx+1)+"번째 : "+$(this).val();
+						
+							//result += $(this).val();
+						//alert(result);
+						
+						
+						
+						
+						//div span안에 result를 출력
+						//$("div>span").html(result);
+						
+						
+						
+						//취미를 출력 시 각 단어 사이에 ,를 넣기(가장 마지막 단어에는 ,가 출력되지 않도록)
+						//취미를 아무것도 선택하지 않았을 경우, "선택되지 않았습니다" 라고 출력
+						
+						
+						//alert($("input[type=checkbox]:checked").length);
+						alert($(":checkbox:checked").length);
+						
+						
+						if(idx>0){
+							result+=",";							
+							
+						}
+						
+							result += $(this).val();
+					});
+						
+						if(result==""){
+							result="선택되지 않았습니다";
+						}
+						$("div>span").html(result);
+					
+				});
+			});
+		</script>
+	</head>
+	<body>
+ 		<form name="frm">
+<!-- 		<form name="frm" action="result.jsp"> -->
+			<input type="checkbox" value="여행" name="hobby">여행<br>
+			<input type="checkbox" value="장기" name="hobby">장기<br>
+			<input type="checkbox" value="바둑" name="hobby">바둑<br>
+			<input type="checkbox" value="독서" name="hobby">독서<br>
+			<input type="checkbox" value="낚시" name="hobby">낚시<br>
+			
+			
+ 			<input type="button" value="전송">
+<!-- 			<button>전송</button> -->
+<!-- 			<input type="submit" value="전송"> -->
+			
+		</form>
+		<div>선택결과 : <span></span></div>
+	</body>
+</html>

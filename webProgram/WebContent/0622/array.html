@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>array(배열)</title>
+		<script>
+			/*
+				배열을 생성하는 방법
+					1)리터럴로 생성하는 방법
+					2)Array객체로 생성하는 방법
+			*/
+			
+			//리터럴로 생성하는 방법
+			var fruits = ["apple", "banana", "peach"];
+			document.write(fruits);
+			document.write("<br>");
+			document.write(fruits[0]+"<br>");
+			
+			
+			//배열로 생성하는 방법
+			var fruits_arr = new Array("apple", "banana", "peach");
+			document.write(fruits_arr+"<br>");
+			document.write(fruits_arr[2]+"<br>");
+			
+			
+			
+			
+			var arr = new Array();
+			document.write("<hr>");
+			arr[0]="하상욱";
+			arr[1]="제갈수진";
+			arr[2]="변소윤";
+			arr[3]="홍성우";
+			document.write(arr+"<br>");
+			document.write("<hr>");
+			
+			
+			for(var i=0;i<arr.length;i++){
+				document.write("arr["+i+"] : "+arr[i]+"<br>");
+				
+			}
+			
+			
+			document.write("<hr>");
+			
+			for(var x in arr){
+				document.write("<br>");
+				document.write(x+" : "+[arr[x]]);
+				
+			
+				
+			}
+			
+			document.write("<hr>");
+			
+			for(var x in arr){
+				if(x==2)break;
+				document.write("<br>");
+				document.write(x+" : "+[arr[x]]);
+				
+				//배열을 2개만 출력하고 나머지는 출력을 안하게끔.......
+				
+			}
+			
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

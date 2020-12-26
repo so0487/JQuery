@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>회원가입</title>
+	<style>
+	table, tr, td {
+	    border: 1px solid #000000;
+	    border-collapse: collapse;
+	}
+	 
+	table {
+	    width: 600px;
+	    height: 800px;
+	}
+	input[type="text"],input[type="password"]{
+		width:300px;
+		height:20px;
+	}
+	
+	select {
+		width:100px;
+		height:20px;
+	}
+	</style>
+	
+	</head>
+	<body>
+	    <form action="result.jsp">
+	        <fieldset>
+	            <legend>회원가입</legend>
+	            <table>
+	                <tr>
+	                    <td><label for="id">ID</label></td>
+	                    <td><input type="text" name="id" id="id"></td>
+	                </tr>
+	                <tr>
+	                    <td>PW</td>
+	                    <td><input type="password" name="pw" id="pw">
+	                </tr>
+	                <tr>
+	                    <td>PW확인</td>
+	                    <td><input type="password" name="pwck" id="pwck">
+	                </tr>
+	                <tr>
+	                    <td>성별</td>
+	                    <td>
+	                    	<input type="radio" name="gender" value="male" id="m"><label for="m">남</label> 
+	                    	<input type="radio" name="gender" value="female" id="f"><label for="f">여</label>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td>취미</td>
+	                    <td>
+	                    	<input type="checkbox" name="hobby" value="운동" id="training"><label for="training">운동</label> 
+	                    	<input type="checkbox" name="hobby" value="여행" id="travel"><label for="travel">여행 </label> 
+	                    	<input type="checkbox" name="hobby" value="독서" id="reading"><label for="reading">독서</label> 
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td>생일</td>
+	                    <td>
+	                    	<input type="date" name="birth" id="birth">
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td>나이</td>
+	                    <td>
+	                    	<input type="text" name="age" id="age">
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td>이메일</td>
+	                    <td>
+	                    	<input type="text" name="e_mail" id="e_mail">@ 
+	                    	<select name="domain">
+	                            <option value="naver.com">naver.com</option>
+	                            <option value="daum.net">daum.net</option>
+	                            <option value="gmail.com">gmail.com</option>
+	                    	</select>
+	                   	</td>
+	                </tr>
+	                <tr>
+	                    <td>메모</td>
+	                    <td>
+	                    	<textarea rows="3" cols="50" name="memo" readonly>메모를 작성</textarea>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td colspan="2">
+	                   <!--  <input type="submit" value="회원가입">  -->
+	                   <input type="button" value="회원가입" onclick="checkEmpty();">
+	                    <!-- <input type="submit" value="회원가입" onclick="checkEmpty();"> -->
+	                    <input type="reset" value="새로고침" >
+	                    </td>
+	                </tr>
+	            </table>
+	        </fieldset>
+	        
+	    </form>
+	    
+	    <script>
+	    	function checkEmpty(){
+	    		//확인(회원가입)버튼을 눌렀을때, 
+	    		//id가 공백일 경우 alert로 "id를 작성해주세요." 라고 문구 띄우기
+	    		
+	    		
+	    		/*
+	     		if(document.getElementById("id").value== ""){
+	    			alert("id를 작성해주세요.");
+	    			return false;
+	    		}
+	    		if(document.getElementById("pw").value== ""){
+	    			alert("pw를 작성해주세요.");
+	    			return false;
+	    		}
+	    		if(document.getElementById("pwck").value== ""){
+	    			alert("pw재확인을 작성해주세요.");
+	    			return false;
+	    		}
+	    		
+	    		//pw와 pwck값이 일치하는지 체크하고 아니면
+	    		//alert로 비밀번호가 일치하지 않습니다. 라고 문구를 띄운 후 return false;
+	    		
+	    		//trim() : 공백제거 메서드
+	    		if(document.getElementById("pw").value
+	    				!=document.getElementById("pwck").value){
+	    			alert("비밀번호가 일치하지 않습니다.");
+	    			return false;
+	    		}
+	    		
+	    		
+	    		if(document.getElementById("birth").value== ""){
+	    			alert("생일을 작성해주세요.");
+	    			return false;
+	    		}
+	    		if(document.getElementById("age").value==""){
+	    			alert("나이를 작성해주세요");
+	    			return false;
+	    		}
+	    		if(document.getElementById("e_mail").value==""){
+	    			alert("이메일을 작성해주세요");
+	    			return false;
+	    		}
+	    		
+	    		
+	    		var gender = document.getElementsByName("gender");
+	    		
+	    		// 둘 중 하나가 체크되어 있지 않을 경우 alert("성별을 체크해주세요");
+	    		// return false;
+	    		
+	    		var check = false;
+	    		
+	    		for(var i=0; i<gender.length; i++){
+	    			if(gender[i].checked==true){
+	    				check=true;
+	    				console.log(gender[i].value);
+	    			}
+	    		}
+	    		
+	    		if(!check){
+	    			alert("성별을 체크해 주세요");
+	    			return false;
+	    		}
+	    		
+	    		
+	    		var hobby = document.getElementsByName("hobby");
+	    		var	check=false;
+	    		
+	    		for(var i=0; i<hobby.length; i++){
+	    			if(hobby[i].checked==true){
+	    				check=true;
+	    				console.log(hobby[i].value);
+	    			}
+	    		}
+	    		
+	    		if(!check){
+	    			alert("취미를 선택해 주세요");
+	    			return false;
+	    		}
+	    		*/ 
+
+ 	    		//alert(document.getElementById("id").value.length);	//공백포함
+	    		//alert(document.getElementById("id").value.trim().length);	//공백제거
+	    		
+	    		/*
+	    		id가 5~8(포함)까지면 true
+	    		이외에는 "id를 5~8자 까지 입력하세요" return false;
+	    		*/
+	    		var length = document.getElementById("id").value.trim().length;	//공백제거
+	   
+	    		if(length<5 || length>8){
+	    			alert("id를 5~8자 까지 입력하세요");
+	    			return false;
+	    		}
+		
+	    		return true;
+	    	}
+	    
+	    </script>
+	    
+	    
+	</body>
+</html>

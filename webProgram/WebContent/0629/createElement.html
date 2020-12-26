@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>createElement</title>
+		<!-- 
+			createElement(tagName) : 태그요소를 생성
+			createTextNode(text) :텍스트 노드를 생성
+			appendChild(node) :새로운 노드를 붙인다		
+		 -->
+	</head>
+	<body>
+		<div id="target" onclick="addText();">
+			여기를 클릭하세요.
+		</div>
+		<button onclick="add();">추가</button>
+		<button onclick="remove();">삭제</button>
+		
+		<div id="result">
+			<button onclick="addRemove();">추가/삭제</button>
+		</div>
+		
+		
+		<script>
+			function addRemove(){
+				var arr = ["Hello","Good Morning!","Happy",
+				           "안녕","좋은아침","행복한 날"];
+				
+				var idx = Math.floor(Math.random()*arr.length);
+				
+				var pTag = document.createElement("p");
+				var node = document.createTextNode(arr[idx]);
+				
+				pTag.appendChild(node); //<p>Hello</p>
+				
+				
+				var btn = document.createElement("button"); //<button></button>
+				btn.onclick = function(){
+					this.parentNode.remove();
+				}
+				btn.innerHTML = "삭제";
+				
+				pTag.appendChild(btn); //<p>Hello <button>삭제</button></p>
+				
+				
+				document.getElementById("result").appendChild(pTag);
+				
+				
+				
+				
+			}
+			function addText(){
+				var txt = "클릭했습니다.";
+				
+				var node = document.createTextNode(txt);
+				document.getElementById("target").appendChild(node);
+				
+			}
+			function add(){
+				var arr = ["Hello","Good Morning!","Happy",
+				           "안녕","좋은아침","행복한 날"];
+				var txtNode = document.createElement("p");
+				//랜덤으로 arr안에 있는 텍스트가 출력되도록 수정해주세요.
+				var idx = Math.floor(Math.random()*arr.length);
+				
+				var node = document.createTextNode(arr[idx]);
+				
+				txtNode.appendChild(node);
+				
+				document.getElementById("target").appendChild(txtNode);
+				
+			}
+			
+			
+			function remove(){
+				var parent = document.getElementById("target");
+				var child = parent.lastChild;
+				
+				parent.removeChild(child);
+				
+			}
+			
+			
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+

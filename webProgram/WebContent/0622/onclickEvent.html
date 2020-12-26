@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>onclickEvent</title>
+		<script>
+			//onclick이벤트시 처리하는 함수
+			
+			function changeColor(color) {
+				document.getElementById("target").style.backgroundColor=color;
+			}
+			
+ 			
+			function onLoadDoc(){
+				document.getElementById("target").style.backgroundColor = "red";
+			}
+			
+		</script>
+	</head>
+	<!-- 	onload 이벤트는 페이지가 로드되자 마자 실행된다(문서 body를 모두 로딩한 후
+			onload 이벤트는 실행되지 않게 하는 이벤트 -->
+	
+	<body id="target" onload="onLoadDoc();">
+		<input type="radio" name="r1" onclick="changeColor('blue');">파랑색<br>
+		<input type="radio" name="r1" onclick="changeColor('green');">녹색<br>
+	
+	
+		<hr>
+
+	영어단어 :<input type="text" id="name" onchange="sub();"><br>
+
+	<p>*입력필드를 벗어나면 소문자로 변경됩니다.</p>
+	
+	<script>
+			function sub(){
+				var name_txt = document.getElementById("name");
+				
+				//name_txt.value = name_txt.value.toLowerCase(); //소문자로 변경
+				name_txt.value = name_txt.value.toUpperCase(); //대문자로 변경
+				
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>first</title>
+		<script src="../js/jquery-3.5.1.min.js"></script>
+		<script>
+			$(function(){
+				$("#ajaxBtn").click(function(event){
+					event.preventDefault();
+					alert(1);
+				});
+			});
+		
+		</script>
+	</head>
+	<body>
+		<form name="ff" action="first.jsp" method="post">
+			이름:<input type="text" name="name"><br>
+			나이:<input type="text" name="age"><br>
+			<input type="submit" id="oldBtn" value="기존의 방식">
+		</form>
+		
+		<hr>
+		<h1>비동기 방식</h1>
+		<form name="ajaxff" action="first.jsp" method="post">
+			이름:<input type="text" name="name"><br>
+			나이:<input type="text" name="age"><br>
+			<input type="submit" id="ajaxBtn" value="ajax방식">
+		</form>
+		<div id="result"></div>
+	</body>
+</html>
+
+
+
+
+
+

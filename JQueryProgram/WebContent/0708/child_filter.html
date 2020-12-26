@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>child_filter</title>
+		<script src="../js/jquery-3.5.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				//페이지 내에서 첫번째 li만 선택
+				$("li:first").css("background","yellow");
+				
+				//ol, ul그룹에서 첫번째 자식(li)을 선택
+				$("li:first-child").css("background","red");
+			});
+		</script>
+	</head>
+	<body>
+		<h1>여자에게 인기있는 남자들</h1>
+		<ol>
+			<li>돈 많은 남자</li>
+			<li>능력있는 남자</li>
+			<li>잘생긴 남자</li>
+			<li>프로그래머</li>
+		</ol>
+		
+		<h1>남자에게 인기있는 여자들</h1>
+		<ol>
+			<li>예쁜여자</li>
+			<li>예쁜여자</li>
+			<li>예쁜여자</li>
+			<li>프로그래머</li>
+		</ol>
+	</body>
+</html>

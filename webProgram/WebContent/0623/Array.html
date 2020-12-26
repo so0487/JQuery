@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Array객체(배열객체)</title>
+		<script>
+			function proc1(){
+				var arr=[];
+				var arr2 = new Array("천의주",null,1,true);
+				
+				arr2[8] = "김선미";
+				
+				for(var i=0; i<arr2.length; i++){
+					document.write(i + " , "+arr2[i]+"<br>");
+				}
+				
+				document.write("<hr>");
+				
+				/*
+					선언이 되지 않은 배열값 undefined는 for-in문에서 출력이 되지 않는다.
+				*/
+			
+				for(var i in arr2){
+					document.write(i + " : "+arr2[i]+"<br>")
+				}
+				
+				document.write("<hr>");
+				
+			}
+			
+			//proc1();
+			
+			/*
+				indexOf() : 배열에서 요소를 찾아 위치를 리턴한다.(맨 앞에서 부터 찾는다.)
+				
+				lastIndexOf() : 역순으로 요소를 찾아 위치를 리턴한다(맨 뒤에서 부터 찾는다.)
+			*/
+			function proc2(){
+				var str_name=["심규열","김영진","강대윤","김판기"];
+				
+				var idx = str_name.indexOf("김판기");
+				var idx2 = str_name.indexOf("천의주");	//없는 값을 찾으면 -1을 출력
+				document.write(idx+"<br>");
+				document.write(idx2);
+								
+				//indexOf에서 값이 존재하지 않을 경우에는 -1
+				if(str_name.indexOf("천의주") < 0){
+					//값이 없을 경우
+					
+				}else{
+					//값이 있을 경우
+				}
+			}
+			//proc2();
+			
+			
+			function proc3(){
+				var str_name=["심규열","김영진","강대윤","김판기","김영진"];
+				
+				var idx = str_name.lastIndexOf("김영진");			
+				document.write(idx);
+			}
+			//proc3();
+			
+			
+			function proc4(){
+				/*
+					prompt를 이용하여 str배열에 이름 4개만 입력하세요
+					그 후 prompt하나를 더 띄워서 이름을 입력하고 
+					입력한 이름이 str배열에 있는 경우는 document.write로
+					"이름이 존재합니다"라고 출력
+					없는 이름이면 "이름이 존재하지 않습니다."라고 출력
+				*/
+				
+				var str_name = new Array();
+				
+				for(var i=0; i<4; i++){
+					str_name[i] = prompt("이름을 입력해 주세요");
+				}
+					document.write(str_name+"<br>");
+				
+				var check_name = prompt("비교할 이름을 입력해 주세요");
+				var flag
+				
+				for(var i in str_name){
+					if(str_name[i].indexOf(check_name)!=-1){
+						flag = true;
+						break;
+					}
+				}
+				
+				if(flag){
+					document.write("이름이 존재합니다.");
+				}else{
+					document.write("이름이 존재하지 않습니다.");
+				}
+				
+			}
+			//proc4();
+			
+			
+			
+			
+			
+			/*
+				pop(); : 배열 맨 뒤의 값을 제거
+				push(대상); : 배열 맨 뒤에 추가
+				
+				shift(); : 배열 맨 앞의 값을 제거
+				unshift(대상); : 배열 맨 앞에 추가
+			*/
+			
+			function proc5(){
+				var str_name = new Array("이명석", "김다은","김성주","지승철");
+				
+				str_name.pop();	//끝의 배열값을 제거
+				str_name.pop();
+				
+				document.write(str_name);
+				document.write("<hr>");
+				
+				str_name.push("지승철");	//배열 값을 붙이기
+				str_name.push("김성주");	//배열 값을 붙이기
+				
+				document.write(str_name);
+				
+			}
+		
+			//proc5();
+			
+			
+			
+			function proc6(){
+				var str_name=["손대성","김해민","이종문","홍준택"];
+				
+				str_name.shift();	//왼쪽으로 이동(가장 앞의 값은 안 보인다.)
+				str_name.shift();	//왼쪽으로 이동(가장 앞의 값은 안 보인다.)
+				document.write(str_name);
+				
+				document.write("<hr>");
+				str_name.unshift("손대성");	//가장 왼쪽에 값이 붙는다
+				str_name.unshift("김해민");	//가장 왼쪽에 값이 붙는다
+				
+				document.write(str_name);
+			}
+			
+			proc6();
+			
+		
+			
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

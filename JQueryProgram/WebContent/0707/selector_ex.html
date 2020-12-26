@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>selector_ex(선택자 문제)</title>
+		<script src="../js/jquery-3.5.1.min.js"></script>
+		<!-- 
+			form태그를 만들고
+			ID, PW, select 태그를 생성한 후 
+			ID는 테두리를 1px solid red
+			PW는 테두리를 2px dashed orange
+			
+			select option을 3개 만들고 각각을 클릭할 경우
+			새로운 p태그를 생성하여 select태그 뒤에 붙여보세요
+			
+			<p>새로운 태그 입니다.</p>
+		
+		 -->
+		 
+		 <script>
+		 	$(function(){
+		 		$("input[type=text]").css("border","1px solid red");
+		 		$("input[type=password]").css("border","2px dashed green").css("backgroundColor","yellow");
+// 		 		$("option[value=opt1]").append("<p>새로운 p태그 입니다.1</p>");
+// 		 		$("option[value=opt2]").append("<p>새로운 p태그 입니다.2</p>");
+// 		 		$("option[value=opt3]").append("<p>새로운 p태그 입니다.3</p>");
+
+				$("#sel").change(function(){
+					var ele = $("<p>새로운 p태그 입니다.</p>");
+					
+					$(this).after(ele);
+				});
+		 	});
+		 </script>
+		 
+		 
+		 
+	</head>
+	<body>
+		<form>
+			ID : <input type="text">
+			PW : <input type="password">
+			
+			<select id="sel">
+				<option value="opt1">옵션1</option>
+				<option value="opt2">옵션2</option>
+				<option value="opt3">옵션3</option>
+			</select>
+			
+		</form>
+	</body>
+</html>

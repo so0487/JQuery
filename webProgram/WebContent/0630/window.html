@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>window</title>
+		<script>
+
+			function open_new() {
+				//함수명은 open으로 사용하지 않는다.
+				//window.open()메서드와 명이 동일하기 때문에 프로그램상 겹칠 수 있다.
+				//(funtion값이 open일 경우 새 창으로 뜨지 않는다. ---> open은 예약어 이므로 함수명으로 사용할 수 없다.)
+				
+				
+				//var win = window.open("new.html","_blank","width=500,height=500");	//지역변수
+				win = window.open("new.html","_blank","width=500,height=500");
+				//win 변수에 window_open객체를 넣고 이후 close시킨다.
+				//var만 땐 후 전역변수로 만들 수 있다.(모든 함수에서 사용 가능)
+				
+				win.moveTo(200,200);
+				//모니터를 기준으로 (200,200)만큼 떨어져 보인다.
+				
+			}
+			
+			
+			function close_win() {
+				win.close();
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="창열기" onclick="open_new();">
+		<input type="button" value="창닫기" onclick="close_win();">
+	</body>
+</html>

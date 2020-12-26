@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JQueryBasic3</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script>
+
+			$(function() {
+				//버튼 숨기기
+
+				$("button").hide();
+				$("h2").click(function() {
+					$(this).hide();
+					//모든 태그가 사라지면 버튼 생성(보여짐)
+					if ($("h2:visible").length == 0) {
+						$("button").show();
+					}
+				});
+				
+				$("button").click(function(){
+					$("h2").show();
+					$(this).hide();
+				});
+
+			});
+		</script>
+		
+	</head>
+	<body>
+		<h1>수행내용</h1>
+		<p>	태그를 이용하여 문장을 만듭니다.<br>
+			클릭하면 문장이 사라집니다.<br>	
+			모든 문장이 사라지면 버튼이 나타납니다.<br>	
+			버튼을 클릭하면 모든 문장이 다시 나타납니다.
+		</p>
+		<hr>
+		<h2>클릭하면 사라집니다.1</h2>
+		<h2>클릭하면 사라집니다.2</h2>
+		<h2>클릭하면 사라집니다.3</h2>
+		<h2>클릭하면 사라집니다.4</h2>
+		<h2>클릭하면 사라집니다.5</h2>
+		<h2>클릭하면 사라집니다.6</h2>
+		
+		<button>보이기</button>
+	</body>
+</html>

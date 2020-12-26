@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>changeImg_ex</title>
+		<script>
+			function changeImg(){
+				document.images[0].src = "../img/computer2.jpg";
+				console.log(document.images[0].src)
+				
+			} 
+			//changeImg();
+			
+			
+			
+			
+			
+			function button() {
+				
+				document.images[0].src="../img/button_on.jpg";
+			}
+			button();
+			
+			
+			
+		function btnImg(obj){
+				
+				if(obj.src.indexOf("_on") > -1){
+					obj.src = "../img/button_off.jpg";
+				}else{
+					obj.src = "../img/button_on.jpg";
+				}
+			}
+			
+			
+		</script>
+		<style>
+			img{
+				width 100px;
+			}
+		</style>
+	</head>
+	
+	<body>
+	
+<!-- 		<img src="../img/computer1.png" alt="computer1"> -->
+<!-- 		<button onclick="changeImg();">눌러주세요</button> -->
+
+<!-- 			<img src="../img/button_off.jpg" alt="button_off"> -->
+<!-- 			<button onclick="button();">눌러주세요</button> -->
+
+			<img src="../img/button_off.jpg" alt="btn" onclick="btnImg(this);">
+ 		
+		
+		
+		
+	</body>
+</html>

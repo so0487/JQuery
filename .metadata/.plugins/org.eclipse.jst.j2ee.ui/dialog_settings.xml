@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="true" key="J2EE_EXPORT_OVERWRITE"/>
+	<item value="true" key="J2EE_EXPORT_SOURCE"/>
+	<list key="J2EE_IMPORT_null">
+		<item value="D:\A_TeachingMaterial\5.JQuery\workspace\화면구현.war"/>
+		<item value="D:\공유폴더\html\webShop_sem.war"/>
+		<item value="C:\Users\SEM\Downloads\boardjdbc.war"/>
+		<item value="C:\Users\SEM\Downloads\김태훈_화면구현\화면구현.war"/>
+	</list>
+	<list key="MRU_RUNTIME_STORE">
+		<item value="Apache Tomcat v7.0"/>
+		<item value="NULL_RUNTIME"/>
+	</list>
+	<list key="J2EE_EXPORT_JST_WEB">
+		<item value="D:\A_TeachingMaterial\5.JQuery\workspace\화면구현.war"/>
+		<item value="D:\공유폴더\html\웹샵소스\webShop_sem.war"/>
+		<item value="D:\공유폴더\html\webShop_sem.war"/>
+	</list>
+</section>

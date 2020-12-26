@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>overflow</title>
+		<style>
+		
+			/*
+				overflow 속성
+				자식 요소가 부모 요소의 범위를 벗어났을 경우 처리하는 방법
+				
+				hidden : 부모영역을 벗어나는 영역이 보이지 않게 한다.
+				scroll : 부모영역을 벗어나는 부분을 스크롤 할 수 있도록 한다.
+				auto   : 부모영역을 벗어나는 부분을 x,y축으로 scroll을 생성한다. 
+			*/
+			
+			div#wrap{border: 2px solid red; width: 300px; height: 100px; /*overflow: scroll*/ /*overflow: auto*/ overflow: hidden;}
+			p{width: 200px; height: 50px; background-color: cyan;}
+		</style>
+		
+	</head>
+	<body>
+		<div id="wrap">
+			<p>p #1</p>
+			<p>p #2</p>
+			<p>p #3</p>
+			<p>p #4</p>
+			<p>p #5</p>
+			<p>p #6</p>
+		
+		</div>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>focus_blur</title>
+		<script src="../js/jquery-3.5.1.min.js"></script> 
+		<script>
+			$(function(){
+				$("input").focus(function(){
+					$(this).addClass("intro")	
+				});
+				
+				
+				//focus와 반대되는 개념
+				//현재 focus 되고 있는 영역 이외의 곳에 클릭하면 focus가 해제된다.
+				$("input").blur(function(){
+					$(this).removeClass("intro");
+				});
+				
+			});
+		</script>
+		<style>
+			.intro{
+				background-color: yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<form>
+			아이디 : <input type="text" id="id"><br>
+			이름 : <input type="text" id="name"><br>
+			이메일 : <input type="text" id="mail"><br>
+		</form>
+	</body>
+</html>

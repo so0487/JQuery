@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>docElement</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script>
+			$(function(){
+				//자바스크립트 문법으로 dom객체를 선택해서 style을 변경
+				var ele = document.getElementsByTagName("h2")[0];
+				ele.style.color = "red";
+				
+				
+				
+				//JQuery문법으로 dom객체를 선택해서 style을 변경
+				$("h2").eq(0).css("color","red");
+				
+				//자바스크립트 문법과 jquery문법을 혼용
+				//혼용해서 쓸 수 없다. (불가능)
+				//.css()jquery메서드이기 때문에 사용할 수 없다.
+			
+				//ele.css("color","orange");	
+				
+				
+				//dom객체를 $()로 감싸서 jquery객체로 변경해준 후 사용은 가능하다.
+				$(ele).css("color","orange");
+				
+				
+			});
+		</script>
+	</head>
+	<body>
+		<h2>h2태그 입니다.1</h2>
+		<h2>h2태그 입니다.2</h2>
+	</body>
+</html>

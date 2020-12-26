@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>calc(계산기)</title>
+		<style>
+			*{text-align:center;}
+		
+		</style>
+	</head>
+	<body>
+	
+<!-- 
+ 	
+		<h1>덧셈 계산기</h1>
+			첫번째 정수 : <input type="text" id="x"><br>
+			두번째 정수 : <input type="text" id="y"><br>
+			합계 : <input type="button" id="sum"><br>
+			<input type="button" value="계산" onclick="calc();">
+
+			
+
+		
+		<script>
+			function calc(){
+				var x = document.getElementById("x").value;
+				var y = document.getElementById("y").value;
+ 	
+ 			/*
+				alert(x);
+				alert(y);
+			*/
+			
+				/*합계text박스에 x+y의 합계를 넣어주세요*/
+				var sum = parseInt(x)+parseInt(y);
+				alert(sum);
+				
+			}
+
+ -->			
+			
+	
+ 	 
+	 <form>
+	 	<table border="1">
+		 			<tr></tr>
+		 				<td colspan="4">입력&nbsp;&nbsp;<input type="text" id="x"></td>
+		 					
+		 			<tr></tr>
+		 				<td colspan="4">합계&nbsp;&nbsp;<input type="text" id="sum"></td>
+		 			
+		 			<tr></tr>
+		 				<td><input type="button" id="btn7" value="7" onclick="calc(this.value);"></td>
+		 				<td><input type="button" id="btn8" value="8" onclick="calc(this.value);"></td>
+		 				<td><input type="button" id="btn9" value="9" onclick="calc(this.value);"></td>
+		 				<td><input type="button" id="btn_div" value="/" onclick="calc(this.value);"></td>
+
+		 				
+		 			<tr></tr>
+		 				<td><input type="button" id="btn4" value="4" onclick="calc(this.value);"></td>
+		 				<td><input type="button" id="btn5" value="5" onclick="calc(this.value);"></td>
+		 				<td><input type="button" id="btn6" value="6" onclick="calc(this.value);"></td>
+		 				<td><input type="button" id="btn_mul" value="*" onclick="calc(this.value);"></td>
+		 				
+		 			<tr></tr>
+		 				<td><input type="button" id="btn4" value="1" onclick="calc(this.value);"></td>
+		 				<td><input type="button" id="btn5" value="2" onclick="calc(this.value);"></td>
+		 				<td><input type="button" id="btn6" value="3" onclick="calc(this.value);"></td>
+		 				<td><input type="button" id="btn_min" value="-" onclick="calc(this.value);"></td>
+		 				
+		 			<tr></tr>
+		 				<td><input type="button" id="btn0" value="0" onclick="calc(this.value);"></td>
+		 				<td><input type="button" id="btn_point" value="." onclick="calc(this.value);"></td>
+		 				<td><input type="button" id="btn_eq" value="=" onclick="calc(this.value);"></td>
+		 				<td><input type="button" id="btn_pul" value="+" onclick="calc(this.value);"></td>
+
+					
+	 	</table>
+	 </form>
+	 	<script>
+		
+		var inputX = document.getElementById("x").value;
+		function calc(val) {
+			if(val=="="){
+				//합계
+				document.getElementById("sum").value = eval(inputX);
+			}else{
+				
+				inputX = inputX+val;
+			
+				document.getElementById("x").value = inputX;
+			}
+			
+		}
+			
+		</script>
+
+	 
+	</body>
+</html>

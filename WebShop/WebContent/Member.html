@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Member</title>
+		<style>
+			*{
+				border-radius : 5px;
+			}
+			#table{
+				border: solid 3px gray;
+			}
+		</style>
+	</head>
+	<body>
+		<form>
+			<table border="0" id="table">
+			<caption>회원가입</caption>
+				<tr>
+					<td>아이디</td>
+					<td><input type="text" id="id"></td>
+					<td><input type="button" id="id_chk" value="중복검사"></td>
+				</tr>
+				<tr>
+					<td>이름</td>
+					<td><input type="text" id="name"></td>	
+				</tr>
+				<tr>
+					<td>생년월일</td>
+					<td><input type="date" id="birth"></td>	
+				</tr>
+				<tr>
+					<td>비밀번호</td>
+					<td><input type="password" id="pwd"></td>	
+				</tr>
+				<tr>
+					<td>휴대폰 번호</td>
+					<td><input type="tel" id="tel"></td>	
+				</tr>
+				<tr>
+					<td>이메일</td>
+					<td><input type="text" id="mail"></td>	
+				</tr>
+				<tr>
+					<td>우편번호</td>
+					<td><input type="text" id="addNum"></td>	
+					<td><input type="button" id="btn_addNum" value="번호검색"></td>	
+				</tr>
+				<tr>
+					<td>주소</td>
+					<td><input type="text" id="add1"></td>	
+				</tr>
+				<tr>
+					<td>상세주소</td>
+					<td><input type="text" id="add2"></td>	
+				</tr>
+			</table>
+			
+			<input type="button" value="제출">
+			<input type="button" value="초기화">
+		</form>
+	</body>
+</html>

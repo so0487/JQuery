@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>first</title>
+		<script src="../js/jquery-3.5.1.min.js"></script>
+		<script>
+			$(function(){
+				$("#ajaxBtn").click(function(event){
+					event.preventDefault();
+					
+					$.ajax({
+						url:"first.jsp",
+						type:"post",
+						//name=하상욱&age=20
+						data:"name="+ $("#name").val() +
+								"&age="+ $("#age").val(),
+						success: function(res){
+							$("#result").html(res);
+						},
+						error: function(){
+							alert("error입니다.");
+						},
+						dataType:"text"						
+					});
+					
+				});
+				
+				
+				$("#addAjaxBtn").click(function(event){
+					event.preventDefault();
+				});
+				
+			});
+		
+		</script>
+	</head>
+	<body>
+		<form name="ff" action="first.jsp" method="post">
+			이름:<input type="text" name="name"><br>
+			나이:<input type="text" name="age"><br>
+			<input type="submit" id="oldBtn" value="기존의 방식">
+		</form>
+		
+		<hr>
+		<h1>비동기 방식</h1>
+		<form name="ajaxff" action="first.jsp" method="post">
+			이름:<input type="text" name="name" id="name"><br>
+			나이:<input type="text" name="age" id="age"><br>
+			<input type="submit" id="ajaxBtn" value="ajax방식">
+		</form>
+		<div id="result"></div>
+		
+		<hr>
+		<!-- 덧셈문제 
+			input type=text 2개 만드세요. 각각 id를 적용 
+			add.jsp 파일을 만들고 text값을 form으로 전달받아
+			jsp파일안에서 두 값을 더한 후 
+			
+			html 파일에서  ajax 메서드를 이용하여 덧셈을 출력해주세요.
+		 -->
+		 	<form id="addAjax" action="add.jsp">
+				<input type="text" id="num1">
+				<input type="text" id="num2">
+				<input type="submit" id="addAjaxBtn" value="덧셈을 출력하세요">
+			</form>
+			<div id="addResult"></div>
+	</body>
+</html>
+
+
+
+
+
+

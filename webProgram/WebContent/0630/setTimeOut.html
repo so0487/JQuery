@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>setTimeOut</title>
+		<script>
+		
+		/*
+			버튼을 누르면 3초 후에 새 창이 열리도록 해 보세요
+		*/
+		
+		
+			function open_new(){
+				win = window.open("new.html","_blank","width=500,height=500");
+		}
+		
+		
+			function show() {
+				//setTimeout(function(){alert("setTimeout 3초후 호출됨");},3000);
+				setTimeout(function(){open_new();},3000);
+			}
+		</script>
+	</head>
+	<body>
+		<p>버튼을 누르면 3초 후에 경고 박스가 화면에 표시됩니다.</p>
+		<input type="button" value="눌러보세요" onclick="show();">
+		<input type="button" value="새창열기" onclick="show();">
+	</body>
+</html>

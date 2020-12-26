@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Lprod</title>
+		<script src="../js/jquery-3.5.1.min.js"></script>
+		<script>
+			$(function(){
+				$("#btnLprodList").click(function(){
+					$.ajax({
+						url:"/ajaxPro/LprodServlet",
+						type:"get",
+						dataType : "json",
+						
+						sucess:function(result){
+						  var code = "<table class = 'table'> <tr><td>Lprod_ID</td>";
+	                  code += "<td>Lprod_NM</td><td>Lprod_GU</td></tr>";
+							$.each(result, function(i){
+			       code +="<tr>"
+                                +"<td>"+result[i].lprodId+ "</td>";
+                          code +="<td>"+result[i].lprodNm + "</td>";      
+                          code +="<td>"+result[i].lprodGu + "</td></tr>";   
+								
+							});
+							code+="</table>"
+							$("#result").html(code);
+						},
+						error:function(){
+							alert("error");
+						}
+					});
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<input type="button" value="Lprod리스트" id="btnLprodList">
+		<div id="result"></div>
+	</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>setInterval</title>
+		<script>
+			/*
+				(body)브라우저의 배경색을 변경
+				빨간색-파란색 2초마다 변경될 수 있도록
+			*/
+		
+		
+		
+			//var id;
+			function changeColor() {
+				id=setInterval(flashText, 1000);
+			}
+			
+			function flashText() {
+				var ele=document.body;//전체 배경을 변경
+				
+				/*
+				
+				//var ele=document.getElementById("target");
+				
+				//ele.style.color = "red";
+				ele.style.color = (ele.style.color == "red")?"blue":"red";
+				ele.style.backgroundColor = (ele.style.backgroundColor =="green")?"yellow":"green";
+				
+				*/
+				
+				//var r = 200;
+				//var g = 100;
+				//var b = 50;
+				
+				//ele.style.backgroundColor="#11ff44";
+				
+				//16진수로 변환하여 색상 입력
+				//ele.style.backgroundColor= "#" +r.toString(16)+g.toString(16)+b.toString(16);
+				
+				/*
+					#RRGGBB
+					RR : 0~255까지 숫자 ->16진수로 변환(00~FF), 빨간색
+					GG : 0~255까지 숫자 ->16진수로 변환(00~FF), 녹색
+					BB : 0~255까지 숫자 ->16진수로 변환(00~FF), 파란색
+					
+				*/
+				
+				
+				
+				/*
+					2초 마다 배경식이 랜덤으로 바뀌는 프로그램을 작성
+					0~255까지 숫자를 랜덤으로 r,g,b에 각각 넣어주세요 
+				*/
+				
+				var r = Math.floor(Math.random()*256);
+				var g = Math.floor(Math.random()*256);
+				var b = Math.floor(Math.random()*256);
+				
+				ele.style.backgroundColor = "#"+r.toString(16)+g.toString(16)+b.toString(16);
+				
+				
+			}
+			
+			function stopTextColor() {
+				clearInterval(id);
+			}
+			
+			
+		</script>
+	</head>
+	<body onload="changeColor();">
+		<div id="target">
+			<p>This is a Text.</p>
+		</div>
+		<input type="button" value="중지" onclick="stopTextColor();">
+		
+		
+		
+	</body>
+</html>

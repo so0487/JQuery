@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>selected(선택 선택자)</title>
+		<script src="../js/jquery-3.5.1.js"></script>
+		<script>
+			$(function(){
+				$("select[name=spring]").change(funSel);
+				
+				function funSel(){
+					//console.log("select funtion");
+					console.log($("#spring option:selected").val());
+					var result="";
+
+					$("#spring option:selected").each(function(){
+						result += $(this).val();
+						$(this).css("border","1px solid red");
+					});
+					
+					
+					alert(result);
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<!-- 
+		
+			multiple	:	한 번에 여러개를 선택가능 하도록 하는 select 기능
+			size 		:	화면에 보여지는 갯수
+			selected	:	선택된 항목
+			
+			**change()이벤트 : 선택했을 경우 발생하는 이벤트
+		 -->
+		
+		<form>
+			<select name="spring" id="spring" multiple size="6">
+				<option>개나리</option>
+				<option>진달래</option>
+				<option>민들레</option>
+				<option selected>벚꽃</option>
+				<option>목련</option>
+				<option>철쭉</option>
+			</select>
+		</form>
+	</body>
+</html>

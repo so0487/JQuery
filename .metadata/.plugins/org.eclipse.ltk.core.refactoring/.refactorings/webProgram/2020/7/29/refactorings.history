@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 3 elements to &apos;img&apos;&#x0D;&#x0A;- Original project: &apos;webProgram&apos;&#x0D;&#x0A;- Destination element: &apos;img&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     computer1.png&#x0D;&#x0A;     computer2.jpg&#x0D;&#x0A;     computer3.png" description="Copy files" element1="WebContent/img/computer1.png" element2="WebContent/img/computer2.jpg" element3="WebContent/img/computer3.png" files="3" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1594953610004" target="/jQueryProgram/WebContent/img" units="0" version="1.0"/>
+</session>

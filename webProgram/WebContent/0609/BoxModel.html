@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>BoxModel</title>
+		<style>
+			*{margin: 0; padding: 0;}
+			
+			/*여백 설정하는 방법
+			margin, padding
+			
+			
+			margin: 10px 10px 10px 10px;		//위	오른쪽 아래 왼쪽
+			margin: 10px 10px 10px ;			//위 오른쪽,왼쪽 아래
+			margin: 10px,10px;					//위,아래	오른쪽,왼쪽
+			margin: 10px;						//위,아래,오른쪽,왼쪽 모두
+			
+			margin-left, margin-right, margin-top, margin-bottom으로도 적는다.
+			
+			-----------------------------------------------------------------
+			
+			padding: 10px 10px 10px 10px;		//위	오른쪽 아래 왼쪽
+			padding: 10px 10px 10px ;			//위 오른쪽,왼쪽 아래
+			padding: 10px,10px;					//위,아래	오른쪽,왼쪽
+			padding: 10px;						//위,아래,오른쪽,왼쪽 모두
+			
+			
+			*/
+			
+			#box{
+				width: 300px;
+				height: 300px;
+				border: 3px solid blue;
+				
+				/*padding: 10px;*/
+				/*margin: 50px;*/
+				
+				
+				margin: 100px 150px 200px 250px;	/*상(top) 우(right) 하(bottom) 좌(left) 순으로 여백 크기 지정*/
+				/*padding: 30px 50px 100px 50px;	/*상(top) 우(right) 하(bottom) 좌(left) 순으로 여백 크기 지정*/			
+				padding: 30px 50px 100px;			/*상(top) 좌우(right) 하(bottom)순으로 여백 크기 지정*/
+				
+				
+				margin: 100px 200px; /*상하   좌우*/
+			}
+			
+			
+			#box2{
+				width: 300px;
+				height: 300px;
+				border: 3px solid red;
+				
+				padding: 20px, 50px;
+				
+				margin-top: 100px;
+				margin-left: 200px; 
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>div밖의 영역입니다.
+		<hr>
+		<!--div id가 box2인 태그를 만들고
+			width 300px, height 300px
+			테두리선은 3px solid red로
+			안쪽여백은 상하 20px, 좌우는 50px, 
+			바깥쪽 여백은 상단 100px, 좌측은 200px인 태그를 작성하세요-->
+			
+		<div id=box2></div>
+	</body>
+</html>

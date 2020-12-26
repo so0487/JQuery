@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>animation</title>
+		<script src="../js/jquery-3.5.1.min.js"></script>
+		<style>
+			div{
+				width: 100px;
+				height: 100px;
+				background: yellow;
+				border: 1px solid #aaa;
+				float: left;
+				margin: 0 10px;
+			}
+			
+			div.colored{
+				background: green;
+			}
+		</style>
+		
+		<script>
+			$(function(){
+				$("#run").click(function(){
+					$("div:animated").toggleClass("colored");
+				});
+				
+				function animateIt(){
+					$("#mover").slideToggle("slow",animateIt);
+				}
+				animateIt();
+			});
+		</script>
+	</head>
+	<body>
+		<div></div>
+		<div id="mover"></div>
+		<div></div>
+		
+		<button id="run">실행</button>
+	</body>
+</html>

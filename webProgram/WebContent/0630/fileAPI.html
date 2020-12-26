@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>fileAPI</title>
+	</head>
+	<body>
+		<input type="file" name="file" id="file"><br>
+		<button onclick="readFile();return false;">파일읽기</button>
+		<textarea id = "result" rows="6" cols="60"></textarea>
+		
+		<script>
+			function readFile(){
+				var files = document.getElementById("file").files;
+				
+				if(!files.length){
+				
+					alert("파일을 선택하세요");
+					//return false; 
+					return; 
+				}
+				
+				var file = files[0];
+				var reader = new FileReader();
+				reader.onload = function(){
+					document.getElementById("result").value = reader.result;	
+				}
+				
+				reader.readAsText(file, "UTF-8");
+				
+			}
+		</script>
+	</body>
+</html>

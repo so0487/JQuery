@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>content_filter</title>
+		<script src="../js/jquery-3.5.1.min.js"></script>
+		<script>
+			$(function(){
+				
+				//jquery라는 문자열이 포함 된 span태그를 선택(대소문자 구분!)
+				//$("span:contains(jquery)").css("border","2px solid blue");
+				//$("span:contains(jQuery)").css("border","2px solid blue");
+				
+				
+				//jqery라는 문자열이 포함되지 않은 span태그를 선택(대소문자 구분)
+				//$("span:not(:contains(jquery))").css("border","2px dashed red");
+				
+				
+				//요소중에 span태그를 갖는 div태그를 선택
+				//$("div:has(span)").css("border","1px solid orange");
+				
+				//아무것도 없는 빈 div를 선택
+				//$("div:empty").css("border","2px solid red");
+				
+				
+				//div태그 중 조상 폰트 사이즈 변경
+				//$("div:parent").css("font-size", "1.5em");
+				
+				
+				//div 중 span자손의 글자굵기를 변경
+				$("div span").css("font-weight","bold");
+			});
+		</script>
+	</head>
+	<body>
+		<hr>
+		<div></div>
+		<div>Hello!!!<span>오늘도 즐겁게 열심히 합시다.</span></div>
+		<p>Hello jQuery!<span>Thanks, jQuery</span></p>
+		<div class="myClass">jQuery!</div>
+		<span class="notMyClass">쉬운이미지 jquery</span>
+ 		<div></div>
+	</body>
+</html>

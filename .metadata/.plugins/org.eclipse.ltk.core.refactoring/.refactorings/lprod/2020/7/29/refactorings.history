@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;lprod&apos; to &apos;lprodPro/src/kr.or.ddit&apos;&#x0D;&#x0A;- Original project: &apos;lprod&apos;&#x0D;&#x0A;- Destination element: &apos;lprodPro/src/kr.or.ddit&apos;&#x0D;&#x0A;- Original element: &apos;lprod&apos;" description="Copy folder" destination="=lprodPro/src&lt;kr.or.ddit" element1="javafxTest/src/kr/or/ddit/lprod" files="0" flags="589830" folders="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1594970705739" units="0" version="1.0"/>
+</session>

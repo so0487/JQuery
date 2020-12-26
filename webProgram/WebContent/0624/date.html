@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>date(객체)</title>
+		<script>
+
+			function date() {
+
+				var date = new Date();
+
+				//형식 변환
+				document.write(date.toLocaleString() + "<br>");
+
+				document.write(date.getDate() + "<br>"); //일을 가져옴(1~31)
+				document.write(date.getDay() + "<br>"); //요일을 가져옴(0(일요일)~6(토요일))
+				document.write(date.getFullYear() + "<br>"); //년도를 가져옴(2000년대 이후)
+				//cument.write(date.getYear()+"<br>");			//년도를 가져옴(현재는 사용하지 않음 : 1900년대만 표시)
+				document.write(date.getHours() + "<br>"); //시간을 가져옴(0~23시)
+				document.write(date.getMilliseconds() + "<br>"); //1000분의 1초 0~999
+				document.write(date.getMinutes() + "<br>"); //분을 가져옴(0~59)
+				document.write(date.getMonth() + "<br>"); //0(1월)~11(월)까지 표시, 월을 표시
+				document.write(date.getSeconds() + "<br>"); //초를 가져옴(0~59)	
+				document.write(date.getTime() + "<br>"); //1970년1월1일 부터 현재까지의 시간을 밀리세컨드로 표시
+
+				document.write("<hr>");
+
+				var today = new Date(2000); //1970년 1월1일 오전9시를 기준으로 날짜(밀리세컨드)를 더해준다.
+				document.write(today);
+			}
+			//date();
+			
+			
+			
+			//Sem 자료
+			function test_2(){
+				
+				var checkDate = new Date(2010,0,1); //2010년 1월 1일
+				var today = new Date(); // 오늘날짜 
+				
+				var n = 1000*60*60*24; //1일에 대한 밀리초 
+				
+				/*
+				1일 -> XXXX밀리세컨드 
+				
+				
+				1일 = 24시간 
+				1시간 = 60분
+				1분 = 60초
+				1초 = 1000밀리초 
+				
+				*/
+				
+				
+				parseInt((today.getTime()-checkDate.getTime())/n)
+				
+				document.write(parseInt((today-checkDate)/n));
+				
+				var theDay = new Date(today.getTime() + 500*n);
+				
+				
+				document.write("<br>"+theDay.toLocaleString());
+			}
+			//test_2();
+			
+			
+						
+			
+			
+						
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			//내가 풀은 것
+			function test() {
+				/*
+					2010년 1월1일1부터 오늘까지의 날짜 : 3828일째
+				 */
+
+				document.write("<hr>");
+
+				/*
+					1일-> XXXX밀리세컨드
+					
+					1일=24시간
+					1시간=60분
+					1분=60초
+					1초=1000밀리초
+					
+					var n = 1000*60*60*24;	//하루에 대한 밀리초
+					
+				 */
+				
+				var date = new Date();
+				 
+				var test_date3 = new Date(2010, 0, 1);
+				var test_date3_2 = new Date(2010, 0, 2);
+
+				document.write("2010년 1월 1일의 Milliseconds : "
+						+ test_date3.getTime() + "<br>");
+
+				document.write("2010년 1월1일 ~오늘까지의 Milliseconds : "
+						+ parseInt(date.getTime()-test_date3.getTime())
+						+ "<br>");
+
+				var ms1 = parseInt(date.getTime() - test_date3.getTime()
+						+ "<br>"); //2010년 1월1일 ~오늘까지의 Milliseconds
+				document.write(ms1 + "<br>");
+
+				document.write("하루의 Millisecond : "
+						+ parseInt(test_date3_2.getTime()
+								- test_date3.getTime()) + "<br>");
+
+				var day_ms = parseInt(test_date3_2.getTime()
+						- test_date3.getTime()); //하루의 ms
+				document.write(day_ms + "<br>");
+
+				document.write("결과 : " + parseInt(ms1 / day_ms) + "<br>");
+
+				/*
+					오늘부터 500일 이후의 날짜(2021년11월5일)
+				
+				 */
+
+				var ms_500day = parseInt(day_ms * 500);
+				document.write("500일의 ms : " + ms_500day + "<br>");
+
+				var result = parseInt(ms_500day + date.getTime());
+
+				document.write("500일 이후의 ms : " + result + "<br>");
+
+				var day = new Date(result);
+				document.write(day);
+
+			}
+			//test();
+			
+		</script>
+		<script>
+			/*
+				오늘을 기준으로 7일 이전에 산 물건은 환불 가능
+				(7일 이내에 산 물건은 환불 가능)
+			*/
+			function checkDate() {
+				var date = document.getElementById("pdate").value;
+				var today = new Date();
+				var checkDate = new Date(date)
+				
+				
+				console.log(checkDate);
+				console.log(pdate);
+				
+				var n = parseInt(today.getTime()/1000/60/60/24)
+						-parseInt(checkDate.getTime()/1000/60/60/24);
+				
+				console.log(n);
+				
+				
+				if(n >7){
+					alert("교환/환불 기간이 지났습니다.");
+				}else{
+					alert("교환 가능합니다.");
+				}
+			}
+			checkDate();
+		</script>
+	</head>
+	<body>
+		<input type="date" id="pdate">
+		<button onclick="checkDate(); return false;">검사</button>
+	</body>
+</html>

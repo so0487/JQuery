@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>computer</title>
+		<script>
+		
+		 function setCookie(cname, cvalue, exdays) {
+			  var d = new Date();
+			  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+			  var expires = "expires="+ d.toUTCString();
+			  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+			}
+		 
+		 
+		 
+		 
+		 function getCookie(cname) {
+			  var name = cname + "=";
+			  var decodedCookie = decodeURIComponent(document.cookie);
+			  var ca = decodedCookie.split(';');
+			  for(var i = 0; i <ca.length; i++) {
+			    var c = ca[i];
+			    while (c.charAt(0) == ' ') {
+			      c = c.substring(1);
+			    }
+			    if (c.indexOf(name) == 0) {
+			      return c.substring(name.length, c.length);
+			    }
+			  }
+			  return decodedCookie;
+			}
+	 
+	 </script>
+		
+	<style>
+	
+	
+	*{
+		box-sizing: border-box;
+	}
+	
+	#computer{
+		float: left;
+		height: 500px;
+		width: 33.333%;
+		border: solid 1px silver;
+		
+	}
+	
+	#computer img{
+		width: 80;
+		height: 200px;
+		margin: 0 auto;
+	}
+	</style>
+
+	</head>
+	<body>
+	
+		<div id="computer">
+			<img src="img/computer1.png" align="middle"> 
+				<p>상품설명</p><br>
+				<button onclick="setCookie('computer1', '1000000', 1);">쇼핑카트에 추가하기</button>
+			</img>
+		</div>
+		
+		
+		<div id="computer">
+			<img src="img/computer2.jpg">
+				<p>상품설명</p><br>
+				<button onclick="setCookie('computer2', '2000000', 1);">쇼핑카트에 추가하기</button>
+			</img>
+		</div>
+		
+		
+		<div id="computer">
+			<img src="img/computer3.png">
+				<p>상품설명</p><br>
+				<button onclick="setCookie('computer3', '3000000', 1);">쇼핑카트에 추가하기</button>
+			</img>
+
+		</div>
+		
+		
+	</body>
+</html>

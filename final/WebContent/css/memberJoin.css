@@ -1,0 +1,15 @@
+@CHARSET "UTF-8";
+
+body{background-color: #edeff2;}
+
+#div_form{width:1200px;height:650px;border-top:1px solid #c4c9ce;border-bottom:1px solid #c4c9ce;margin: 0 auto;padding:20px 0 0 10px;}
+#title{width:1200px;margin:0 auto;background:#f4f5f9;font-size:2.0em;padding:10px;text-align:center;border-top:1px solid #c4c9ce;}
+p{font-size:1.2em;}
+input{width:260px;height:40px;border:1px solid #d2d2d2;margin:0 auto;}
+#btnid{width:100px;}
+select{width: 460px;height:50px;border:1px solid #d2d2d2;margin: 0 auto;}
+#birth_year, #birth_month, #bir_day{width:100px;height:40px;}
+#div_btn{margin-bottom:10px; auto;text-align:center;}
+#email{width: 300px;height: 50px;}
+#select_email{width: 140px;height: 50px;}
+

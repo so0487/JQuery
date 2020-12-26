@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CreateElement_Ex</title>
+	</head>
+	<body>
+		<!-- 
+			javascript로
+			ul/li태그를 생성한 후에
+			각 li태그(3개 생성) 안에 list1, list2....라고 텍스트를 넣어주세요.
+			
+			
+			
+			step1)	ul태그 작성
+			step2)	반복문을 이용하여
+						-	텍스트 노드 작성
+						-	li태그 작성
+						-	li태그 안에 택스트노드 추가
+						-	ul태그 안에 li태그 추가
+			step3)	result에 ul태그 추가
+			
+			
+			//result안에 넣어주세요.
+			
+		 -->
+		 
+		 
+		 <div id = "result"></div>
+		 
+		 <script>
+		 	var ulTag = document.createElement("ul");	//ul태그 생성
+		 	
+		 	
+		 	for(var i=1;i<=3;i++){
+		 		var txt = document.createTextNode("list"+i);
+		 		var liTag = document.createElement("li");
+		 		liTag.appendChild(txt);		//<li>list1<li> 
+		 		ulTag.appendChild(liTag);	//<ul><li>list1</ly</ul>
+		 	}
+		 	
+		 	document.getElementById("result").appendChild(ulTag);
+
+		 	
+		 
+		 </script>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>break</title>
+	</head>
+	<script>
+		var number=1;
+		
+		for(var i=0;i<10;i++){
+			
+			if(i==3)
+				break;	//제일 가까운 반복문을 빠져나온다.
+			
+			document.write(number*i+"<br>");
+		}
+		
+		
+			document.write("----------------------------------------");
+			document.write("<br>");
+		
+		for(var i=0;i<10;i++){
+			if(i==3)
+				continue;			//반복문의 처음으로 돌아간다
+			document.write(i+"<br>");
+		}
+		document.write("end");
+		
+	</script>
+	<body>
+		
+	</body>
+</html>

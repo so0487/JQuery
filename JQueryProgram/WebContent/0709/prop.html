@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>prop()</title>
+		<script src="../js/jquery-3.5.1.min.js"></script>
+		<script>
+			/*
+				prop()	:	속성상태 설정 및 상태 얻기
+							HTML태그 속성 중에서 속성이름 없이 사용되는 속성을 설정하거나,
+							설정 여부를 알 수 있는 메서드
+							(ex: checked, selected, readonly, multiple.......)
+				
+				
+				- 상태설정(set)
+				$(선택자).prop("속성명",값);
+					- 값이 true 이면 해당 속성을 설정하는 것
+					- 값이 false이면 해당 속성을 해제하는 것
+					
+				
+				- 상태 얻기(get)
+				$(선택자).prop("속성명");
+					- 해당 속성이 설정되어 있으면 true
+					- 해제 되어 있으면 false를 반환한다.
+			
+			*/
+		
+		
+		
+			$(function(){
+				//$("#checkAll, .ck").prop("checked", true);
+				
+				
+				$("#checkAll").change(function(){
+					$(".ck").prop("checked",$(this).prop("checked"));
+				});
+				$("#btnCheck").click(function(){
+					$("#checkAll").prop("checked", !$("#checkAll").prop("checked"));
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<input type="checkbox" id="checkAll">전체선택<br>
+
+
+		<input type="checkbox" value="1" class="ck">1<br>
+		<input type="checkbox" value="2" class="ck">2<br>
+		<input type="checkbox" value="3" class="ck">3<br>
+		<input type="checkbox" value="4" class="ck">4<br>
+		<input type="checkbox" value="5" class="ck">5<br>
+		
+		
+		<hr>
+		
+		<input type="button" value="선택" id>
+		
+	</body>
+</html>

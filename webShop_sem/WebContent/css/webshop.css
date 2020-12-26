@@ -1,0 +1,35 @@
+*{margin:0; padding:0;}
+
+header{width:100%; height:100px; background-color:#F5F5F5;}
+header h1 img{width:100px; vertical-align:middle;}
+header h1 a{text-decoration:none; color:black;}
+header h1 a:hover{text-decoration:underline}
+nav{width:100%; height:60px; background-color:#FFFFFF; border-top:3px dotted olive; border-bottom:1px solid olive; padding:15px 0;}
+nav{text-align:center;}
+nav ul{list-style:none; padding:0; margin:0;} /*글자의 기본 패딩과 마진을 0으로 초기화*/
+nav ul li{display : inline-block; margin:5px 30px;}
+nav ul li a{padding:10px; font-weight:bold;  text-decoration:none; letter-spacing:0.5em;}
+/*a태그에 주는 패딩은 a태그의 배경 크기를 늘려주는것*/
+nav ul li a:visited{color:green;} 
+nav ul li a:hover{color:#2a2b2b; background-color:#baf7ff;}
+
+aside#left{width:15%; height:500px; float:left; background-color:#707f9c; /* padding:20px 0; */} /*패딩은 전체 사이즈가 늘어난다 주의!!!*/
+aside#left h2{color:white; padding-left:20px;}
+aside#left ul{background-color:#525d76; list-style:none; padding:0;}
+aside#left ul li{border-bottom:1px solid rgba(0,0,0,0.3)}
+aside#left ul li a{display: block; text-decoration:none; color:white; font-weight:bold; padding:10px 20px;} 
+/*a태그에 블럭넣어주면 패딩만큼 강제로 늘어남*/
+aside#left ul li a:hover{background-color:rgba(0,0,0,0.3); color:#FF00EE;}
+aside#left ul li a:visited{color:yellow;}
+
+section{width:70%; height:500px; background-color:#FFFFFF; float:left;}
+article{height:98%;}
+section iframe{width:100%; height:100%; overflow:hidden;}
+section h2{display:none;}
+
+aside#right{width:15%; height:500px; background-color:#e0e0e0; float:left;}
+.text{display:block; margin:2px;}
+aside#right div{margin:10px;}
+aside#right .fontSmall{font-size:10pt;}
+
+footer{width:100%; height:40px; clear:both; background-color:black; color:white; text-align:center; padding:10px;}

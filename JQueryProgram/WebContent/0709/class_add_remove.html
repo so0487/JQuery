@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>class_add_remove</title>
+		<script src="../js/jquery-3.5.1.min.js"></script>
+		<style>
+			.pclass{
+				font-size: 1.5em;
+				color: red;
+			}
+			
+			
+			
+			.boxClass{
+				border : 2px dashed red;
+			}
+		</style>
+		
+		<script>
+			$(function(){
+				/*
+					addClass 	: 	해당하는 class를 적용시킨다.
+					removeClass : 	해당하는 class를 해지한다.
+					toggleClass : 	addClass와 removeClass를 번갈아 가며 수행
+									(true->false, false->true)
+					hasClass	:	해당 class가 있는지 여부를 true, false로 반환한다.
+				
+				*/
+				
+				
+				$("#add").click(function(){
+					$("p").addClass("pclass");
+				});
+				$("#remove").click(function(){
+					$("p").removeClass("pclass");				
+				});
+				$("#toggle").click(function(){
+					$("p").toggleClass("pclass");
+				});
+				$("#has").click(function(){
+					alert($("p").hasClass("pclass"));
+				});
+					
+				/*
+					div 태그 안에 체크박스 3개를 생성하고
+					체크박스 3개가 모두 체크되는 순간
+					div 테두리를 addClass를 사용하여 border : 2px dashed red로 변경
+					
+					체크박스에서 하나라도 해제가 되면 removeClass를 사용하여 테두리선을 없애주세요.
+					
+				*/
+				
+				
+				
+				//체크박스의 전체 개수
+				var len = $("input[name='ck']").length;
+				
+				//체크를 해제/설정 하였을 경우 그 때마다 이벤트 발생
+				$("input[name='ck']").change(function(){					
+					if($("input[name='ck']:checked").length ==len){
+						$("div").addClass("boxClass");
+					}else{
+						$("div").removeClass("boxClass");
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+	<p>이번강좌만 하고 쉽시다~ ~ ~ ~ ~ </p>
+		<button id="add">add클래스</button>
+		<button id="remove">remove클래스</button>
+		<button id="toggle">toggle클래스</button>
+		<button id="has">has클래스</button>
+		
+		<hr>
+		<div>
+			<input type="checkbox" name="ck">선택1
+			<input type="checkbox" name="ck">선택2
+			<input type="checkbox" name="ck">선택3
+		</div>
+	</body>
+</html>

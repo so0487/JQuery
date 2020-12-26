@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>예제문제</title>
+		<script>
+			/*
+			2. 1부터 200까지의 짝수의 합을 구하는 프로그램(continue를 이용)
+			*/
+
+			var sum = 0;
+			for (var i = 1; i <= 200; i++) {
+				if (i % 2 == 0) {
+					sum +=i;
+				}
+			}
+			document.write("1부터 200까지 짝수의 합은 "+sum);
+			
+			
+
+			/*
+			3. 사용자가 입력한 값을 계속 더하고, 사용자가 0을 입력하면 그 때 까지 누적된 값을 출력하는 프로그램 작성
+			 */
+			
+			document.write("<br>")
+			
+			var sum=0;
+			while(true){
+				num=prompt("숫자를 입력하세요");
+				sum+=parseInt(num);
+				if(num==0){
+		 		document.write("입력된 정수의 합 : "+sum);
+					break;
+				}
+			}
+		 		
+
+			/*
+			5. 1~100까지 중 2의 배수 이면서 3의 배수인 것만 출력
+			 */
+			 document.write("<br>");
+			 for(var i=1;i<=100;i++){
+				 if(i%2==0&&i%3==0){
+					 document.write(i+"&nbsp");
+				 }
+			 }
+
+			/*
+			6. 두 수를 입력(prompt)하여 두 수의 합이 100이상일 때 만 출력
+				continue를 이용, 두 수 모두 0이 입력되면 종료
+			 */
+			 
+			 
+				document.write("<br>")
+				var num1 = prompt("첫번째 숫자를 입력하세요");
+				var num2 = prompt("두번째 숫자를 입력하세요");
+				var sum = parseInt(num1)+parseInt(num2);
+				
+				if(sum>=100){
+					document.write(sum);
+				}
+				
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

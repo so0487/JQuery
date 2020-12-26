@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>최종 프로젝트</title>
+		<script src="../js/jquery-3.5.1.min.js"></script>
+		<script src="../js/jquery.bxslider.js"></script>
+		<link rel="stylesheet" href="../css/main.css?ver=1.1">
+		<link rel="stylesheet" href="../css/jquery.bxslider.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script>
+			$(function(){
+				$("#nav>ul>li, .sub_back").mouseenter(function(){
+					$(".submenu, .sub_back").stop().slideDown();
+				});
+				$("#nav>ul>li, .sub_back").mouseleave(function(){
+					$(".submenu, .sub_back").slideUp();
+				});
+				$("#noMoreBtn").click(function(){
+					$("#popUp").hide();
+				});
+				$("#closeBtn").click(function(){
+					$("#popUp").hide();
+				});
+			});
+		</script>
+		<style>
+			
+		</style>
+	</head>
+	<body>
+		<div id="topBox" class="box">
+			<div id="top">
+				<a href="#">Foreigners</a>
+				<a href="#">고객센터</a>
+				<a href="#">회원가입</a>
+				<a href="login.html" target="ifr">로그인</a>
+			</div>
+		</div>
+		<div id="navBox" class="box">
+			<div id="nav">
+				<ul>
+					<a href=""><img src="../img/logo.png" alt="로고입니다."></a>
+					<li>
+						<a href="#">민원</a>
+						<ul class="submenu">
+							<li><a href="#">일반민원</a></li>
+							<li><a href="#">예산낭비 신고</a></li><br>
+							<li><a href="#">소극행정 신고센터</a></li>
+							<li><a href="#">예산절감 제안</a></li><br>
+							<li><a href="#">갑질피해 신고센터</a></li>
+							<li><a href="#">예산낭비신고 소개</a></li><br>
+							<li><a href="#">민원소개</a></li>
+						</ul>
+					</li>
+					<li><a href="#">민원상담</a></li>
+					<li><a href="#">국민제안</a></li>
+					<li><a href="#">민원빅데이터</a></li>
+					<li><a href="#">국민생각함</a></li>
+					<li><a href="#">정책실현</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="sub_back"></div>
+		<div id="ifrBox" class="box">
+			<iframe src="home.html" id="ifr" name="ifr" class="box"></iframe>
+		</div>
+		<div id="footerBox" class="box">
+			<div id="footer">
+				<p>
+					30102 세종특별자치시 도움5로 20 정부세종청사 국민권익위원회<br>
+					정부민원안내 콜센터 (국번없이) 110 / 시스템관련 이용안내 : 1600-8172(대표번호) / 070-4266-7797(일반전화) 상담안내 09:00~18:00(평일)<br>
+					COPYRIGHT(c)국민권익위원회 All Rights Reserved.<br>
+				</p>
+			</div>
+		</div>
+		<div id="popUp">
+			<p>부동산 대책 설문조사</p>
+			<img src="../img/survey.jpg">
+			<input type="button" id="noMoreBtn" value="오늘 하루 그만보기">
+			<input type="button" id="closeBtn" value="닫기">
+		</div>
+	</body>
+</html>

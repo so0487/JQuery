@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>주민번호 유효성 검사</title>
+		<script>
+	
+
+			/*
+			주민등록번호를 입력 받아 생년월일과 성별을 출력하는
+			프로그램을 작성하시오.(입력은 prompt로 입력받는다.)
+			
+			예) 주민등록번호를 110326-4432618로 입력 받은 경우
+			
+			생일 : 2011년 3월 26일
+			
+			성별 : 여자 나이:
+				
+			 */
+			function ex1() {
+				
+				//입력받은 주민번호 중 앞 출생년도 가져오기
+				var num=prompt("주민번호를 입력하세요"+"<br>");
+				
+				document.write("입력받은 값 : "+num+"<br>");
+				
+				var bir_year = num.substring(0,2);
+				document.write("bir_year : "+bir_year+"<br>");
+				
+				
+				//입력받은 주민번호 중 출생 월 가져오기
+				var month = num.substring(2,4);
+				var monthCheck = false
+				if(month<13){
+					document.write("month : "+month+"<br>");
+					monthCheck=true
+				}else{
+					document.write("월 형식 오류"+"<br>");
+					monthCheck = false;
+				}
+				
+				
+				
+				//입력받은 주민번호 중 출생 일 가져오기
+				var day = num.substring(4, 6);
+				var dayCheck = false;
+				if(day<32){
+					document.write("day : "+day+"<br>");
+					dayCheck=true;
+				}else{
+					document.write("day : "+day+"<br>");
+					document.write("날짜 형식 오류"+"<br>");
+				}
+				
+				
+				
+				
+				//주민번호로 성별 판별
+				var gender = num.substring(7,8);
+				document.write("gender : "+gender+"<br>");
+	
+				if(gender==1||gender==3){
+					document.write("성별 : 남성"+"<br>");
+				}else if(gender==2||gender==4){
+					document.write("성별 : 여성"+"<br>");
+				}else{
+					document.write("성별 형식 오류"+"<br>");
+				}
+				
+				
+				
+				//출생년도 붙여서 표시
+				var full_bir_year = "";
+				if(monthCheck==true&&dayCheck==true){
+					if(gender==1||gender==2){
+						document.write("생년월일 : 19"+bir_year+month+day+"<br>");
+						full_bir_year=parseInt("19"+bir_year);
+					}else if(gender==3||gender==4){
+						document.write("생년월일 : 20"+bir_year++"년"+month+day+"<br>");
+						full_bir_year=parseInt("20"+bir_year);
+					}else{
+						document.write("형식 오류"+"<br>");
+					}
+				}else{
+					document.write("형식 오류"+"<br>");
+				}
+				
+			
+				
+				
+				//나이 계산
+				//1)현재 년도를 계산
+				var date = new Date();
+				var year = date.getFullYear();
+				
+				
+				//2)현재년도-출생년도+1
+				var age=parseInt(year-full_bir_year+1);
+				
+				document.write("나이 : "+age)
+			
+				
+				
+			}
+			ex1();
+
+			/*
+			
+			주민등록번호를 입력 받아 주민등록번호의 유효성을
+			검사하는 프로그램을 작성하시오.(ABCDEF-GHIJKLM)
+			
+			A*2 + B*3 + ... + H*9 + I*2 + ... + L*5 의 총합을 구한다.
+			
+			1번의 합을 11로 나눈 나머지를 구한다.
+			
+			11에서 2번의 결과를 뺀다.
+			
+			3번의 결과가 0~9이면 값 그대로, 10이면 0, 11이면 1로 변환
+			
+			4번의 결과와 M자리의 값이 같으면 맞는 번호이다.
+			
+			 */
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

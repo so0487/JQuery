@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap   
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map  2.0//EN"      
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="member">
+	<typeAlias alias="memberVO" type="kr.or.ddit.vo.MemberVO"/>
+
+
+    <select id="memberList" resultClass="memberVO">
+    	select * from MMEMBER
+    </select>
+    
+	<select id="memberPass" resultClass="String">
+    	select MEM_PASS from MMEMBER where MEM_ID = #id#
+    </select>
+     
+    <select id="memberInfo" parameterClass="map" resultClass="memberVO">
+        select MEM_ID  from MMEMBER where MEM_ID = #id#
+    </select>
+    
+    <insert id="insertMember" parameterClass="memberVO">
+          insert into MMEMBER(
+                    MEM_ID
+                    ,MEM_PASS
+                    ,MEM_NAME
+                    ,MEM_BIRTH
+                   ,MEM_GENDER
+                    ,MEM_MAIL
+                    ,MEM_TEL
+                )values (
+                   #mem_id#
+                   ,#mem_pass#
+                   ,#mem_name#
+                   ,#mem_birth#
+                   ,#mem_gender#
+                   ,#mem_mail#
+                   ,#mem_tel#
+
+                ) 
+               
+          <selectKey keyProperty="mem_id" resultClass="string">
+<!--             select MEM_NAME  from MEMBER  where MEM_NAME = #mem_name# -->
+            select MEM_NAME  from MMEMBER  where MEM_ID = #mem_id#
+          </selectKey>     
+    </insert>
+
+</sqlMap>
+
+
+
+
+
+
+
+
+
+
+

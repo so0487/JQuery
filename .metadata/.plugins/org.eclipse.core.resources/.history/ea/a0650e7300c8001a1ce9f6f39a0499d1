@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+ <h1>Hello</h1>
+   클라이언트의 요청에 의해서 서버내에 실행되는 JSP파일 입니다.
+   
+   <%
+   	request.setCharacterEncoding("UTF-8"); //한글 인코딩
+   	String nameValue = request.getParameter("name");
+   	String ageValue = request.getParameter("age");
+   %>
+   
+   
+   
+   
+   
+   
+   
+   
